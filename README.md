@@ -1,2 +1,2 @@
-# bimaster-bi
-Projeto final da disciplica BI do curso MBA BI Master da PUC-RJ
+# bimaster PoC
+Prova de Conceito do curso MBA BI Master da PUC-RJ
