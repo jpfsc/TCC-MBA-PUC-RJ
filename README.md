@@ -14,8 +14,8 @@ Trabalho apresentado ao curso [BI MASTER](https://ica.puc-rio.ai/bi-master) como
 - [Link para a monografia](https://link_da_monografia.com). <!-- caso não aplicável, remover esta linha -->
 
 - Trabalhos relacionados: <!-- caso não aplicável, remover estas linhas -->
-    - [Nome do Trabalho 1](https://link_do_trabalho.com).
-    - [Nome do Trabalho 2](https://link_do_trabalho.com).
+    - [BAGNI, Fábio Luiz. O Carste Jandaíra, Bacia Potiguar, e suas implicações para a qualidade de reservatórios. 2021. 216f. Tese (Doutorado em Geodinâmica e Geofísica) - Centro de Ciências Exatas e da Terra, Universidade Federal do Rio Grande do Norte, Natal, 2021.](https://repositorio.ufrn.br/handle/123456789/45438).
+    - [Bagni et al. 2022. Karstified layer and caves formed by superposed epigenetic dissolution along subaerial unconformities in carbonate rocks - Impact on reservoir-scale permeability. Marine and Petroleum Geology: 138](https://doi.org/10.1016/j.marpetgeo.2022.105523).
 
 ---
 
