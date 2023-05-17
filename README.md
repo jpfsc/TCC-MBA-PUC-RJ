@@ -1,6 +1,6 @@
 <!-- antes de enviar a versão final, solicitamos que todos os comentários, colocados para orientação ao aluno, sejam removidos do arquivo -->
 
-# Título do Trabalho
+# Machine on Rocks: aplicação de machine learning em dados petrográficos e petrofísicos de rochas carbonáticas
 
 #### Aluno: [João Paulo Teixeira da Fonseca](https://github.com/jpfsc).
 #### Orientadora: [Dra. Manoela Rabello Kohler](https://github.com/manoelakohler).
