@@ -1,5 +1,3 @@
-<!-- antes de enviar a versão final, solicitamos que todos os comentários, colocados para orientação ao aluno, sejam removidos do arquivo -->
-
 # Machine on Rocks: uso de machine learning para classificação de fácies petrográficas e agrupamento de fácies petrofísicas em rochas carbonáticas carstificadas
 
 #### Aluno: [João Paulo Teixeira da Fonseca](https://github.com/jpfsc).
@@ -9,19 +7,15 @@
 
 Trabalho apresentado ao curso [BI MASTER](https://ica.puc-rio.ai/bi-master) como pré-requisito para conclusão de curso e obtenção de crédito na disciplina "Projetos de Sistemas Inteligentes de Apoio à Decisão".
 
-- [Link para o código](https://github.com/link_do_repositorio/nome_do_arquivo_de_codigo). <!-- caso não aplicável, remover esta linha -->
+- [Link para o código](https://github.com/link_do_repositorio/nome_do_arquivo_de_codigo).
 
-- [Link para a monografia](https://link_da_monografia.com). <!-- caso não aplicável, remover esta linha -->
-
-- Trabalhos relacionados: <!-- caso não aplicável, remover estas linhas -->
+- Trabalhos relacionados:
     - [BAGNI, Fábio Luiz. O Carste Jandaíra, Bacia Potiguar, e suas implicações para a qualidade de reservatórios. 2021. 216f. Tese (Doutorado em Geodinâmica e Geofísica) - Centro de Ciências Exatas e da Terra, Universidade Federal do Rio Grande do Norte, Natal, 2021.](https://repositorio.ufrn.br/handle/123456789/45438)
     - [Bagni et al. 2022. Karstified layer and caves formed by superposed epigenetic dissolution along subaerial unconformities in carbonate rocks - Impact on reservoir-scale permeability. Marine and Petroleum Geology: 138](https://doi.org/10.1016/j.marpetgeo.2022.105523)
 
 ---
 
 ### Resumo
-
-<!-- trocar o texto abaixo pelo resumo do trabalho, em português -->
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar nisl vestibulum tortor fringilla, eget imperdiet neque condimentum. Proin vitae augue in nulla vehicula porttitor sit amet quis sapien. Nam rutrum mollis ligula, et semper justo maximus accumsan. Integer scelerisque egestas arcu, ac laoreet odio aliquet at. Sed sed bibendum dolor. Vestibulum commodo sodales erat, ut placerat nulla vulputate eu. In hac habitasse platea dictumst. Cras interdum bibendum sapien a vehicula.
 
