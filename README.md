@@ -1,4 +1,4 @@
-# Machine on Rocks: uso de machine learning para classificação de fácies petrográficas e agrupamento de fácies petrofísicas em rochas carbonáticas carstificadas
+# Machine on Rocks: uso de machine learning para avaliação geológica e petrofísica de rocha reservatório de petróleo
 
 #### Aluno: [João Paulo Teixeira da Fonseca](https://github.com/jpfsc).
 #### Orientadora: [Dra. Manoela Rabello Kohler](https://github.com/manoelakohler).
@@ -34,6 +34,15 @@ Donec molestie, ante quis tempus consequat, mauris ante fringilla elit, euismod 
 
 ### 4. Conclusões
 
+### 5. Referências Bibliográficas
+
+Amaefule, J.O., Altunbay, M., Tiab, D., Kersey, D.G., Keelan, D. 1993. Enhanced reservoir description: using core and log data to identify hydraulic (flow) units and predict permeability in uncored interval/wells. Houston: SPE 68th annual technical conference. SPE-26436.
+Bruce, P., Bruce, A. 2019. Estatística prática para cientistas de dados: 50 conceitos essenciais, tradução Luciana Ferraz. Rio de Janeiro: Alta Books. 320p.
+Cuddy, S. 2021. The benefits and dangers of using artificial intelligences in petrophysics. Artificial Intelligence in Geoscienses (2): 1-10.
+Evsukoff, A.G. 2020. Inteligência computacional: fundamentos e aplicações [recurso eletrônico]. 1ed. Rio de Janeiro: e-papers
+Ippolito, M., Fergunson, J., Jenson, F. 2021. Improving facies prediction by combining supervised and unsupervised learning methods. Journal of Petroleum Science and Engineering (200). 108300.
+McDonald, A. 2021. Data quality considerations for petrophysical machine learning models. SPWLA: 62nd annual logging symposium. SPE-195068-MS.
+Xu, C., Misra, S., Srinivasan, P., Ma, S. 2019. When petrophysics meets big data: what can machine do?. Bahrain: SPE Middle Est Oil and gas Show and Conference. SPE-195068-MS
 
 ---
 
