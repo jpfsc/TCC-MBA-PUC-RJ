@@ -25,15 +25,166 @@ Donec molestie, ante quis tempus consequat, mauris ante fringilla elit, euismod 
 
 ### 1. Introdução
 
+A geologia do petróleo e petrofísica são áreas com variados tipos de dados, desde textos como às descrições petrográficas (de rocha), variáveis categóricas como classificação de rocha e dados numéricos como ensaios laboratoriais e perfis de poços, além de imagens 2D e 3D (Xu et al 2019 e McDonald, 2021). A análise integrada dessa variedades de dados gera uma oportunidade para aplicação de técnicas de inteligência artificial e que foi bem resumido por Cuddy (2021).
+
+Essa prova de conceito tem como objetivo aplicar o uso de técnicas de agrupamento e classificação em um processo de avaliação de rocha carbonáticas cartificadas análogas a reservatórios de petróleo no qual integra descrição petrográfica, análise laboratoriais de petrofisica e geoquímica com objetivo de criar grupos de rochas com características semelhantes para armazenamento e fluxo de fluido e posterior classificação de fácies de rochas. A metodologia proposta é uma adaptação do trabalho de Ippolito et al (2021) no qual combina o método supervisionados e não-supervisionado para a geração de classes de rocha.
 
 
 ### 2. Modelagem
 
+A modelagem consiste de 3 etapas e foi utilizado principalmente a biblioteca SciKit-Learn (Pedregosa et al, 2011) versão 1.2.2. As etapas foram:
+
+1. Condicionamento da base de dados 
+2. Seleção de atributos
+3. Inferência
+
+#### 2.1 Condicionamento da base de dados
+Para esse trabalho utilizou-se de descrição petrográfica de rochas carbonáticas e análises laboratoriais de geoquímica e petrofísica básica realizadas em 157 amostras de rocha carbonática carstificada e publicadas por Bagni (2021).
+
+Descrição da base de dados utilizados:
+* Sample (sample code)
+* Lithology : categórico, litologia 
+* Grain Size / Crystallinity:categórico, tamanho de grão/cristal
+* Sorting: categórico, seleção do tamanha do grão
+* Pore type 1st (Main pore type): categórico, tipo de poro principal
+* Cement 1st (Main cement): categórico, tipo de cimento principal
+* Pore Size: categórico, tamanha do poro
+* Pore Size Mean (mm): numérico, tamanho do poro em milimetros
+* Pore Size Max Vug Size in plug (mm): numérico, tamanho do poro vugular medido em plug em milimetros
+* Depositional System: categórico, classificação do sistema deposicional
+* Main Diagenetic Environment: categórico, classificação do ambiente diagenético
+* Microfacies: categórico, classificação de microfácies
+* Calcite+: númerico, teor de mineral calcite proveniente da análise geoquímica
+* Dolomite+: númerico, teor de mineral dolomita proveniente da análise geoquímica
+* QFM+: númerico, teor de minerais quartzo-feldspato-mica proveniente da análise geoquímica
+* Phi (%): númerico, porosidade em percentagem proveniente da análise petrofísica
+* Kabs (mD):  númerico, permeabilidade em miliDarcy proveniente da análise petrofísica
+* GrainDensity (g/cc):  númerico, média da massa específica do grão em g/cm3 proveniente da análise petrofísica
+
+#### 2.2 Seleção de atributos
+
+A análise exploratória dos dados mostra uma relação não linear com a permeabilidade e FZI por isso adotou-se a correlação de Sprearman para analisar o grau de dependência das variáveis.
+
+(Figura: Correlação Sprearman: devido a relações não lineares de permeabilidade e FZI)
+
+Para a modelagem de fáceis petrofísicas (Petrophysical Rock Type, PRT) por agrupamento foram selecionados variáveis categóricas de “tipo de poro” e “tamanho de poro” e variáveis numéricas  “porosidade” (Phi, fraction), “massa específica de grão (GrainDensity, g/cc)” e “permeabilidade” (Kabs, mD). Essas variáveis são utilizadas historicamente na modelagem de fácies petrofísicas por métodos convencionais (Lucia e Amaefule 1993). Na figura XX mostra um gráfico de dispersão relacionando porosidade (no X) com a permeabilidade (no Y) e usando como rótulos o tipo de poro e a média do tamanho de poro como tamanho do símbolo do rótulo. Nota-se a relação não-linear forte entre porosidade e permeabilidade
+
+(Figura: Gráfico phi x K / tipo de poro e tamanho do poro)
+
+Para a classificação de fácies sedimentares (litofácies), foram selecionados às variáveis categóricas relacionados a litologia e mineralogia, tais como  “litologia”, “tamanho de grão”, “seleção de grão”, “tipo de cimento”,  e numéricas da análise geoquímica  “teor de minerais siliciclásticos, QFM”, “Teor de calcita” e "teor de dolomita”.  Foi inserido o grupo de “PRT KHierarquico” definido na etapa anterior 
+
+#### 2.3 Inferências
+
+O pré-processamento foi o mesmo adotado para os modelos de agrupamento.
+
+Desse modo adotou-se um fluxo de pré-processamento dos dados separando em dados categóricos, numéricos lineares e numéricos não-linear conforme o fluxo da figura abaixo.
+
+(Figura: pipeline de pre-processamento)
+
+**Modelagem dos grupos de Fácies Petrofísica (Petrophysical Rock Type, PRT)**
+
+Testou-se dois tipos de algoritmo de agrupamento (clustering):
+
+1. K-médias (Kmeans), e
+2. Hieraquico aglomerativo.
+
+A especificação do número ideal de grupos para aplicação no algoritmo de K-médias foi baseado na análise integrada das métricas:
+1. Soma do quadrado das distâncias do centro dos cluster (WCSS), “análise do cotovelo”;
+2. Indice de Calinski-Harabasx (1974), busco do maior valor;
+3. Indice de Davies-Bouldin (1979), busca do menor valor; e
+4. Coeficiente de Silhueta de Rousseew (1987), busca de valores mais próximos de +1.
+   
+A figura XX mostra os gráficos gerados e a identificação de número otimizado de grupos sendo 6 de modo a melhor atender os critérios. 
+
+(Figura: gráficos de análise do número otimo de grupos)
+
+Modelo Kmeans Hyper-parametros:
+N_clusters = 6
+N_init  = 50
+Random_state =1
+Max_iter = 500
+
+Um modelo foi gerado com o algoritmo de agrupamento hierárquico aglomerativo por ser mais flexível que o agrupamento de K-média e acomodar variáveis não numéricas e ser mais sensível na descoberta de grupos anormais (ou outliers) (Bruce & Bruce 2019). 
+Foi utilizado o corte de distância (distance_threshold) = 10
+
+
+**Abordagem para classificação de fácies**
+
+Foi realizado uma separação entre dado de treino (70% dos dados) e teste;
+sendo necessário realizar um balanceamento das amostras utilizando a técnica de naive random over-sampling
+Devido a número muito baixo de amostras, adotou-se uma associação de microfácies com base na descrição detalhada de Bagni (2021) e foi necessário adotar um balanceamento através do algoritmo de naive random over-sampling
+
+(Figura: gráfico de barras do número de amostras antes e após-balanceamento)
+
+Seleção de modelo por busca de melhores hiper-parâmetros para os algoritmos de Decision Tree e Random Forest
+
+Melhores hyper-parâmetros para Decision Tree:
+Critério: gini
+Max_depth = 12
+Min_samples_leaf = 1
+
+Melhores hyper-parâmetros para Random Forest:
+Critério: gini
+Max_depth =  8
+Min_samples_leaf = 1
+N_estimators = 100
+
+
 
 ### 3. Resultados
 
+Análise de performance dos modelos de agrupamento: 
+
+Modelo de agrupamento Kmeans
+Rand Index: 0,676
+Homogeneity Score: 0,242
+Completeness Score: 0,221
+V Measure Score: 0,231
+
+(Figura: comparação conceptçaõ geologo x machine learning)
+
+Modelo de agrupamento K hierárquico aglomerativo
+Rand Index: 0,689
+Homogeneity Score: 0,328
+Completeness Score: 0,205
+V Measure Score: 0,252
+
+(Figura: comparação conceptçaõ geologo x machine learning)
+
+Esses parâmetros não são muitos diferentes e não ajudam muito a avaliação, portanto foi adotado a comparação de boxplots com as prpriedaes...
+
+(Figura: boxplots)
+
+Dendograma do hierarquico
+
+Análise de performance dos modelos de classificação: 
+
+Modelo de classificação Decision Tree
+Acurácia: 0,681
+Acurácia Ponderada: 0,745
+Kappa: 0,569
+F1: 0,718
+(Figura matrix de confusão e features selxtion)
+
+Modelo de classificação Random Forest
+Acurácia: 0,872
+Acurácia Ponderada: 0,895
+Kappa: 0,811
+F1: 0,888
+(Figura matrix de confusão e features selxtion)
 
 ### 4. Conclusões
+
+A adoção do modelo de agrupamento hierárquico aglomerativa com a integração de dados de tipo de poro e tamanho do poro (obtidos na descrição petrográfica) e dos dados de porosidade, permeabilidade e massa específica do grão (oriundo da análise petrofísica) colaborou para uma melhor definição de grupos de rocha com características permo-porosas semelhantes. 
+
+A classificação de fácies com o método com Random Forest mostrou-se viável e ágil
+O modelo com Random Forest demonstrou os melhores resultados e a aplicação é viável para propagação das fácies em amostras não classificadas e sem o viés da subjetividade de diferentes geólogos intérpretes.
+
+Esse método tem potencial em aplicação em dados históricos dados históricos visto ser necessário apenas às descrições petrográficas e mineralógicas (e/ou geoquímicas) comumente armazenadas em forma tabular ou textual, não sendo necessário revisitar imagens 2D de lâminas petrográficas.
+
+Vantagens dessa abordagem é poder utilizar dados categóricos e dados laboratoriais para a definição de petrophysical rock type. 
+
+Esses dados também podem ser obtidos de análise de imagem 2D de lâminas petrográficas e volumes (3D) de micro-tomografia, sendo necessário apenas que os dados sejam discretizados em forma de tabelas (arrays).
 
 
 ### _Referências Bibliográficas_
