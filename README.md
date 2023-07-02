@@ -37,7 +37,7 @@ A modelagem consiste de 3 etapas e foi utilizado principalmente a biblioteca Sci
 3. Inferência
 
 #### 2.1 Condicionamento da base de dados
-Para esse trabalho utilizou-se de descrição petrográfica de rochas carbonáticas e análises laboratoriais de geoquímica e petrofísica básica realizadas em 157 amostras de rocha carbonática carstificada e publicadas por Bagni (2021).
+Para esse trabalho utilizou-se de descrição petrográfica de rochas carbonáticas e análises laboratoriais de geoquímica e petrofísica básica realizadas em 157 amostras de rocha carbonática carstificada e publicadas em Bagni (2021).
 
 Descrição da base de dados utilizados:
 * Sample (sample code)
@@ -99,11 +99,12 @@ A figura XX mostra os gráficos gerados e a identificação de número otimizado
 
 ![Melhor numero de grupos com Kmeans](figures/Best_Cluster_Number.png)
 
-Modelo Kmeans Hyper-parametros:
-N_clusters = 6
-N_init  = 50
-Random_state =1
-Max_iter = 500
+Hiper-parâmetro | Modelo Kmeans
+---------- | ----------
+N_clusters| 6
+N_init  | 50
+Random_state | 1
+Max_iter | 500
 
 Um modelo foi gerado com o algoritmo de agrupamento hierárquico aglomerativo por ser mais flexível que o agrupamento de K-média e acomodar variáveis não numéricas e ser mais sensível na descoberta de grupos anormais (ou outliers) (Bruce & Bruce 2019). 
 Foi utilizado o corte de distância (distance_threshold) = 10
@@ -140,9 +141,13 @@ V Measure Score    | 0,231              | 0,252
 
 Esses parâmetros não são muitos diferentes e não ajudam muito a avaliação, portanto foi adotado a comparação de boxplots com as prpriedaes...
 
-(Figura: boxplots)
+![BOXPLOT Kmeans](figures/BOXPLOT_grupos_kmeas.png)
+
+![BOXPLOT Kmeans](figures/BOXPLOT_grupos_hierarquico.png)
 
 ![Dendogram do modelo Hierárquico Aglomerativo](figures/Khierarchical_Dendogram.png)
+
+![XPLOT Phi x K por grupo hierarquico](figures/XPLOT_grupos_hierarquico.png)
 
 **Análise de performance dos modelos de classificação**
 
@@ -153,9 +158,11 @@ Acurácia Ponderada | 0,745         | 0,895
 Kappa              | 0,569         | 0,811
 F1                 | 0,718         | 0,888
 
-(Figura Decision Tree: matrix de confusão e features selection)
+![Decision Tree: matrix de confusão](figures/CONFUSION_MATRIZ_Decision_Tree.png)
+![Decision Tree: features selection](figures/FEATURES_SELECTION_decision_tree.png)
 
-(Figura Random Forest: matrix de confusão e features selection)
+![Random Forest: matrix de confusão](figures/CONFUSION_MATRIZ_Random_Forest.png)
+![Random Forest: features selection](figures/FEATURES_SELECTION_random_forest.png)
 
 
 
