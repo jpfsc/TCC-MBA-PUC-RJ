@@ -1,0 +1,166 @@
+Sample,Lithology,Depositional System,GrainSize / Crystallinity,Sorting,Compaction,Pore Type 1st,Pore Type 2nd,Cement 1st,Cement 2nd,Main Diagenetic Environment,Pore Size,Pore Size Mean (mm),Pore Size Max (mm),Por Size Max Vug Size in plug (mm),OBS,OBS2,Microfacies
+PFJ04F,BioFLT,Lagoonal,,,1,Micro Intraparticle,Wp,Blocky,Granular,Burial,Microporo - limite visualização do poro,0.01,0.01,0,"Brechas, exposição? Raizes? Solo?",,MF 4
+PFJ08F,BioFLT,Lagoonal,,,3,Micro Intraparticle,Micro Intraparticle,Granular,Blocky,Meteoric Phreatic,Microporo - limite visualização do poro,0.01,0.01,0,,,MF 4
+PFJ09A,BioPCK,Bc Sand-Shoals,,,2,Micro Intraparticle,Micro Intraparticle,Blocky,Syntaxial Overgrowth,Burial,Microporo - limite visualização do poro,0.01,0.01,0,,,MF 1
+PFJ09G,BioPCK,Bc Sand-Shoals,,,2,Micro Intraparticle,,Granular,Syntaxial Overgrowth,Meteoric Phreatic,Microporo - limite visualização do poro,0.01,0.01,0,,,MF 1
+PFJ02H,BioGST,Bc Sand-Shoals,Very Coarse Sand ,Poorly Sorted,3,Partial Moldic,Micro Intraparticle,Granular,Syntaxial Overgrowth,Meteoric Phreatic,"Mesoporo muito pequeno 0,125 mm ao limite visualização do poro",0.0625,0.125,0,,"gastropode, alga verde, miliolidio, Gastropode com lama jogando e retrabalhando",MF 1
+PFJ03A,BioGST,Bc Sand-Shoals,Coarse Sand ,Poorly Sorted,3,Partial Moldic,Micro Intraparticle,Fibrous to Bladed Fringe,Syntaxial Overgrowth,Marine,"Mesoporo muito pequeno 0,125 mm ao limite visualização do poro",0.0625,0.125,0,,,MF 1
+PFJ03C,BioPCK,Bc Sand-Shoals,,,2,Partial Moldic,Interparticle,Fibrous to Bladed Fringe,Syntaxial Overgrowth,Marine,"Mesoporo muito pequeno 0,125 mm ao limite visualização do poro",0.0625,0.125,0,,,MF 1
+PFJ07I,BioFLT,Lagoonal,,,2,Micro Intraparticle,Partial Moldic,Drusy,Syntaxial Overgrowth,Burial,"Mesoporo muito pequeno 0,125 mm ao limite visualização do poro",0.0625,0.125,0,,,MF 4
+PFJ08C,BioGST,Bc Sand-Shoals,Coarse Sand ,Poorly Sorted,3,Partial Moldic,Intercrystalline,Granular,Syntaxial Overgrowth,Meteoric Phreatic,"Mesoporo muito pequeno 0,125 mm ao limite visualização do poro",0.0625,0.125,0,Perfil de exposição subaérea,,MF 1
+PFJ08J,BioGST,Bc Sand-Shoals,Coarse Sand ,Poorly Sorted,2,Micro Intraparticle,Partial Moldic,Blocky,Granular,Burial,"Mesoporo muito pequeno 0,125 mm ao limite visualização do poro",0.0625,0.125,0,,,MF 1
+PFJ08N,BioPCK,Bc Sand-Shoals,,,2,Partial Moldic,Interparticle,Fibrous to Bladed Fringe,Syntaxial Overgrowth,Marine,"Mesoporo muito pequeno 0,125 mm ao limite visualização do poro",0.0625,0.125,0,franja descolada,,MF 1
+PFJ09B,BioGST,Bc Sand-Shoals,Very Coarse Sand ,Poorly Sorted,2,Micro Intraparticle,Wp,Blocky,Syntaxial Overgrowth,Burial,"Mesoporo muito pequeno 0,125 mm ao limite visualização do poro",0.0625,0.125,0,,,MF 1
+PFJ09C,BioGST,Bc Sand-Shoals,Coarse Sand ,Moderately Sorted,2,Micro Intraparticle,Partial Moldic,Syntaxial Overgrowth,Blocky,Marine,"Mesoporo muito pequeno 0,125 mm ao limite visualização do poro",0.0625,0.125,0,,,MF 1
+PFJ09E,PelGST,Pel Sand-Shoals,,,2,Partial Moldic,Micro Intraparticle,Syntaxial Overgrowth,Fibrous to Bladed Fringe,Marine,"Mesoporo muito pequeno 0,125 mm ao limite visualização do poro",0.0625,0.125,0,,,MF 2
+PFJ09J2,PelPCK,Pel Sand-Shoals,,,2,Micro Intraparticle,Wp,Granular,Syntaxial Overgrowth,Meteoric Phreatic,"Mesoporo muito pequeno 0,125 mm ao limite visualização do poro",0.0625,0.125,0,,,MF 2
+PFJ09M1,BioGST,Bc Sand-Shoals,Coarse Sand ,Poorly Sorted,2,Partial Moldic,Micro Intraparticle,Syntaxial Overgrowth,Granular,Marine,"Mesoporo muito pequeno 0,125 mm ao limite visualização do poro",0.0625,0.125,0,,,MF 1
+PFJ09M2,BioGST,Bc Sand-Shoals,Coarse Sand ,Poorly Sorted,2,Partial Moldic,Micro Intraparticle,Syntaxial Overgrowth,Granular,Marine,"Mesoporo muito pequeno 0,125 mm ao limite visualização do poro",0.0625,0.125,0,,,MF 1
+PFJ05F2,BioGST,Bc Sand-Shoals,Coarse Sand ,Poorly Sorted,2,Moldic,Partial Moldic,Blocky,Syntaxial Overgrowth,Burial,"Mesoporo pequeno 0,125 a 0,25 mm",0.1875,0.25,0,,,MF 1
+PFJ06B,PelGST,Pel Sand-Shoals,Fine Sand ,Well Sorted,1,Moldic,Vug,Syntaxial Overgrowth,Fibrous to Bladed Fringe,Marine,"Mesoporo pequeno 0,125 a 0,25 mm",0.1875,0.25,0,,,MF 2
+PFJ06L,PelGST,Pel Sand-Shoals,,,2,Moldic,Vug,Syntaxial Overgrowth,Fibrous to Bladed Fringe,Marine,"Mesoporo pequeno 0,125 a 0,25 mm",0.1875,0.25,0,,,MF 2
+PFJ09K,PelGST,Pel Sand-Shoals,Fine Sand ,Well Sorted,2,Micro Intraparticle,Partial Moldic,Drusy,Syntaxial Overgrowth,Marine,"Mesoporo pequeno 0,125 a 0,25 mm",0.1875,0.25,0,veio de calcita,,MF 2
+PFJ12A,DOLMud,Upper Supratidal,Fine-Medium Crystalline,,2,Intercrystalline,Vug,Dolomitization,,Eogenetic,"Mesoporo pequeno 0,125 a 0,25 mm",0.1875,0.25,0,,,MF 5a
+PFJ12E,DOLMud,Upper Supratidal,Fine-Medium Crystalline,,2,Fracture,Fr-Wc,Dolomitization,Drusy,Pedogenesis,"Mesoporo pequeno 0,125 a 0,25 mm",0.1875,0.25,0,,,MF 5b
+PFJ03J,PelPCK,Pel Sand-Shoals,,,2,Moldic,Partial Moldic,Granular,Syntaxial Overgrowth,Marine,"Mesoporo médio 0,25 a 0,5 mm",0.375,0.5,0,Muita Microporosidade,,MF 2
+PFJ04G,BioPCK,Bc Sand-Shoals,,,2,Micro Intraparticle,Moldic,Blocky,Syntaxial Overgrowth,Burial,"Mesoporo médio 0,25 a 0,5 mm",0.375,0.5,0,,,MF 1
+PFJ04K,BioGST,Bc Sand-Shoals,Very Coarse Sand ,Poorly Sorted,2,Moldic,Partial Moldic,Granular,Blocky,Meteoric Phreatic,"Mesoporo médio 0,25 a 0,5 mm",0.375,0.5,0,,,MF 1
+PFJ05B,BioGST,Bc Sand-Shoals,Very Coarse Sand ,Moderately Sorted,2,Moldic,Mo,Granular,Syntaxial Overgrowth,Meteoric Phreatic,"Mesoporo médio 0,25 a 0,5 mm",0.375,0.5,0,,,MF 1
+PFJ05F1,BioGST,Bc Sand-Shoals,Coarse Sand ,Moderately Sorted,1,Moldic,Partial Moldic,Blocky,Granular,Burial,"Mesoporo médio 0,25 a 0,5 mm",0.375,0.5,0,cto suturado,,MF 1
+PFJ06K1,PelGST,Pel Sand-Shoals,Fine Sand ,Well Sorted,2,Vug,Interparticle,Granular,Fibrous to Bladed Fringe,Meteoric Phreatic,"Mesoporo médio 0,25 a 0,5 mm",0.375,0.5,0,,,MF 2
+PFJ06K2,PelGST,Pel Sand-Shoals,Fine Sand ,Well Sorted,2,Vug,Fr-Vug,Granular,Syntaxial Overgrowth,Meteoric Phreatic,"Mesoporo médio 0,25 a 0,5 mm",0.375,0.5,0,,,MF 2
+PFJ07K2,PelGST,Pel Sand-Shoals,Medium Sand ,Moderately Sorted,3,Moldic,Partial Moldic,Syntaxial Overgrowth,Blocky,Marine,"Mesoporo médio 0,25 a 0,5 mm",0.375,0.5,0,,,MF 2
+PFJ08M,BioGST,Bc Sand-Shoals,Coarse Sand ,Poorly Sorted,2,Moldic,Mo,Blocky,Granular,Burial,"Mesoporo médio 0,25 a 0,5 mm",0.375,0.5,0,,,MF 1
+PFJ12F,DOLMud,Upper Supratidal,Fine-Medium Crystalline,,2,Intracrystalline,Vug,Dolomitization,Drusy,Eogenetic,"Mesoporo médio 0,25 a 0,5 mm",0.375,0.5,0,,,MF 5a
+PFJ12G,DOLMud,Upper Supratidal,Fine-Medium Crystalline,,2,Fracture,Intracrystalline,Dolomitization,Drusy,Eogenetic,"Mesoporo médio 0,25 a 0,5 mm",0.375,0.5,0,,,MF 5a
+PFJ06M,PelGST,Pel Sand-Shoals,Fine Sand ,Moderately Sorted,1,Moldic,Partial Moldic,Syntaxial Overgrowth,Fibrous to Bladed Fringe,Marine,"Mesoporo grande 0,5 a 1 mm",0.75,1,0,,,MF 2
+PFJ07H,BioFLT,Lagoonal,,,2,Micro Intraparticle,Wp,Drusy,Syntaxial Overgrowth,Burial,"Mesoporo grande 0,5 a 1 mm",0.75,1,0,,,MF 4
+PFJ09D,BioGST,Bc Sand-Shoals,Coarse Sand ,Poorly Sorted,2,Moldic,Mo,Syntaxial Overgrowth,Fibrous to Bladed Fringe,Marine,"Mesoporo grande 0,5 a 1 mm",0.75,1,0,,,MF 1
+PFJ09J1,PelPCK,Pel Sand-Shoals,,,2,Vug,Micro Intraparticle,Drusy,Syntaxial Overgrowth,Burial,"Mesoporo grande 0,5 a 1 mm",0.75,1,0,veio e vug com calcita,,MF 2
+PFJ09L,PelGST,Pel Sand-Shoals,Fine Sand ,Well Sorted,2,Vug,Micro Intraparticle,Syntaxial Overgrowth,Fibrous to Bladed Fringe,Marine,"Mesoporo grande 0,5 a 1 mm",0.75,1,0,vug-cimento telo?,,MF 2
+PFJ12H,DOLMud,Upper Supratidal,Fine-Medium Crystalline,,2,Moldic,Mo-Wc,Dolomitization,Drusy,Eogenetic,"Mesoporo grande 0,5 a 1 mm",0.75,1,0,,,MF 5a
+PFJ05G,BioGST,Bc Sand-Shoals,Very Coarse Sand ,Moderately Sorted,2,Fracture,Fr-Vug,Blocky,Granular,Burial,Mesoporo muito grande 1 a 4 mm,2.5,4,0,cto suturado,,MF 1
+PFJ07K1,,,,,3,,,,,,,,,0,,,MF 1
+PFJ11C1,DOLBind/Mud,Upper intertidal,Medium Crystalline,,2,Vug,Intercrystalline,Dolomitization,,Eogenetic,,,,0,,,MF 7
+PFJ02D,BioGST,Bc Sand-Shoals,Coarse Sand ,Poorly Sorted,2,Partial Moldic,Interparticle,Fibrous to Bladed Fringe,Granular,Marine,"Mesoporo muito pequeno 0,125 mm ao limite visualização do poro",0.0625,0.125,1,DOLOMITOS NO PORO INTERPARTICULA,"Alga verde, miliolidio",MF 1
+PFJ04J (45),BioGST,Bc Sand-Shoals,Very Coarse Sand ,Moderately Sorted,3,Fracture,Partial Moldic,Blocky,Syntaxial Overgrowth,Burial,"Mesoporo muito pequeno 0,125 mm ao limite visualização do poro",0.0625,0.125,1,,,MF 1
+PFJ07J1,PelPCK,Pel Sand-Shoals,,,2,Micro Intraparticle,Partial Moldic,Syntaxial Overgrowth,Granular,Marine,"Mesoporo muito pequeno 0,125 mm ao limite visualização do poro",0.0625,0.125,1,,,MF 2
+PFJ03G,BioGST,Bc Sand-Shoals,Coarse Sand ,Moderately Sorted,2,Vug,Partial Moldic,Fibrous to Bladed Fringe,Blocky,Marine,"Mesoporo pequeno 0,125 a 0,25 mm",0.1875,0.25,1,,,MF 1
+PFJ04H,BioGST,Bc Sand-Shoals,Very Coarse Sand ,Moderately Sorted,2,Micro Intraparticle,Moldic,Blocky,Fibrous to Bladed Fringe,Burial,"Mesoporo pequeno 0,125 a 0,25 mm",0.1875,0.25,1,cto concavo-convexo,,MF 1
+PFJ05K,BioGST,Bc Sand-Shoals,Coarse Sand ,Poorly Sorted,2,Partial Moldic,Micro Intraparticle,Fibrous to Bladed Fringe,Granular,Marine,"Mesoporo pequeno 0,125 a 0,25 mm",0.1875,0.25,1,conchas quebradas,,MF 1
+PFJ01I,BioGST,Bc Sand-Shoals,Coarse Sand ,Well Sorted,2,Partial Moldic,Micro Intraparticle,Blocky,Syntaxial Overgrowth,Burial,"Mesoporo médio 0,25 a 0,5 mm",0.375,0.5,1,,"gastropode, micrita,foraminiferos",MF 1
+PFJ02I,BioGST,Bc Sand-Shoals,Coarse Sand ,Well Sorted,2,Partial Moldic,Micro Intraparticle,Granular,Fibrous to Bladed Fringe,Meteoric Phreatic,"Mesoporo médio 0,25 a 0,5 mm",0.375,0.5,1,,,MF 1
+PFJ08I1,BioGST,Bc Sand-Shoals,Very Coarse Sand ,Poorly Sorted,2,Partial Moldic,Micro Intraparticle,Blocky,Granular,Burial,"Mesoporo médio 0,25 a 0,5 mm",0.375,0.5,1,,,MF 1
+PFJ03B,BioGST,Bc Sand-Shoals,Coarse Sand ,Poorly Sorted,2,Partial Moldic,Micro Intraparticle,Fibrous to Bladed Fringe,Granular,Marine,"Mesoporo grande 0,5 a 1 mm",0.75,1,1,,gastropode,MF 1
+PFJ05J,BioGST,Bc Sand-Shoals,Coarse Sand ,Very Well Sorted,2,Partial Moldic,Vug,Fibrous to Bladed Fringe,Granular,Marine,"Mesoporo grande 0,5 a 1 mm",0.75,1,1,,,MF 1
+PFJ07J2,PelPCK,Pel Sand-Shoals,,,2,Vug,Moldic,Granular,Fibrous to Bladed Fringe,,"Mesoporo grande 0,5 a 1 mm",0.75,1,1,,,MF 2
+PFJ08H,BioRUD,Bc Sand-Shoals,Granule Gravel ,Very Well Sorted,2,Micro Intraparticle,Partial Moldic,Blocky,Granular,Burial,"Mesoporo muito pequeno 0,125 mm ao limite visualização do poro",0.0625,0.125,2,,,MF 1
+PFJ01L,BioGST,Bc Sand-Shoals,Coarse Sand ,Moderately Sorted,2,Partial Moldic,Moldic,Blocky,Syntaxial Overgrowth,Burial,"Mesoporo pequeno 0,125 a 0,25 mm",0.1875,0.25,2,,concha recristalização,MF 1
+PFJ01M,BioGST,Bc Sand-Shoals,Very Coarse Sand ,Poorly Sorted,3,Partial Moldic,Micro Intraparticle,Blocky,Granular,Burial,"Mesoporo pequeno 0,125 a 0,25 mm",0.1875,0.25,2,"Bivalve com franja, e cimento crescendo para o centro?",alga verde,MF 1
+PFJ04D,BioGST,Bc Sand-Shoals,Very Coarse Sand ,Poorly Sorted,3,Partial Moldic,Intercrystalline,Syntaxial Overgrowth,Blocky,Marine,"Mesoporo pequeno 0,125 a 0,25 mm",0.1875,0.25,2,estilólito,,MF 1
+PFJ04I,BioGST,Bc Sand-Shoals,Very Coarse Sand ,Moderately Sorted,2,Micro Intraparticle,Moldic,Blocky,Syntaxial Overgrowth,Burial,"Mesoporo pequeno 0,125 a 0,25 mm",0.1875,0.25,2,,,MF 1
+PFJ01H,BioGST,Bc Sand-Shoals,Coarse Sand ,Moderately Sorted,2,Partial Moldic,Micro Intraparticle,Blocky,Granular,Burial,"Mesoporo médio 0,25 a 0,5 mm",0.375,0.5,2,,,MF 1
+PFJ02E,BioRUD,Bc Sand-Shoals,Granule Gravel ,Poorly Sorted,2,Micro Intraparticle,Partial Moldic,Blocky,Fibrous to Bladed Fringe,Burial,"Mesoporo médio 0,25 a 0,5 mm",0.375,0.5,2,,,MF 1
+PFJ08K,BioGST,Bc Sand-Shoals,Coarse Sand ,Very Well Sorted,2,Moldic,Micro Intraparticle,Blocky,Fibrous to Bladed Fringe,Burial,"Mesoporo médio 0,25 a 0,5 mm",0.375,0.5,2,,,MF 1
+PFJ02B,BioFLT,Lagoonal,,,1,Moldic,Micro Intraparticle,Blocky,Granular,Burial,Mesoporo muito grande 1 a 4 mm,2.5,4,2,,,MF 4
+PFJ08D,BioGST,Bc Sand-Shoals,Coarse Sand ,Poorly Sorted,2,Partial Moldic,Moldic,Blocky,Syntaxial Overgrowth,Burial,Mesoporo muito grande 1 a 4 mm,2.5,4,2,,,MF 1
+PFJ02G,BioWCK,Lagoonal,,,2,Micro Intraparticle,Wp,Syntaxial Overgrowth,Granular,Marine,"Mesoporo muito pequeno 0,125 mm ao limite visualização do poro",0.0625,0.125,3,,,MF 4
+PFJ08B,BioGST,Bc Sand-Shoals,Very Coarse Sand ,Poorly Sorted,2,Micro Intraparticle,Partial Moldic,Blocky,Granular,Burial,"Mesoporo muito pequeno 0,125 mm ao limite visualização do poro",0.0625,0.125,3,,,MF 1
+PFJ01N,PelGST,Pel Sand-Shoals,Fine Sand ,Well Sorted,1,Partial Moldic,Moldic,Drusy,Granular,Burial,"Mesoporo pequeno 0,125 a 0,25 mm",0.1875,0.25,3,VUG CIMENTADO,"oolitico, miliolidio,gastropode",MF 2
+PFJ05E1,BioGST,Bc Sand-Shoals,Coarse Sand ,Very Well Sorted,2,Partial Moldic,Moldic,Syntaxial Overgrowth,Granular,Marine,"Mesoporo pequeno 0,125 a 0,25 mm",0.1875,0.25,3,,,MF 1
+PFJ04L,BioGST,Bc Sand-Shoals,Very Coarse Sand ,Poorly Sorted,3,Partial Moldic,Micro Intraparticle,Blocky,Fibrous to Bladed Fringe,Burial,"Mesoporo médio 0,25 a 0,5 mm",0.375,0.5,3,,,MF 1
+PFJ05E2,BioGST,Bc Sand-Shoals,Coarse Sand ,Poorly Sorted,2,Partial Moldic,Moldic,Syntaxial Overgrowth,Granular,Marine,"Mesoporo médio 0,25 a 0,5 mm",0.375,0.5,3,,,MF 1
+PFJ05I,BioGST,Bc Sand-Shoals,Very Coarse Sand ,Poorly Sorted,3,Micro Intraparticle,Partial Moldic,Fibrous to Bladed Fringe,Syntaxial Overgrowth,Marine,"Mesoporo médio 0,25 a 0,5 mm",0.375,0.5,3,,,MF 1
+PFJ08A,BioRUD,Bc Sand-Shoals,Granule Gravel ,Moderately Sorted,2,Micro Intraparticle,Partial Moldic,Blocky,Granular,Burial,"Mesoporo médio 0,25 a 0,5 mm",0.375,0.5,3,,,MF 1
+PFJ02J,BioGST,Bc Sand-Shoals,Very Coarse Sand ,Moderately Sorted,2,Partial Moldic,Micro Intraparticle,Granular,Syntaxial Overgrowth,Meteoric Phreatic,"Mesoporo grande 0,5 a 1 mm",0.75,1,3,,,MF 1
+PFJ03D,BioGST,Bc Sand-Shoals,Very Coarse Sand ,Poorly Sorted,1,Moldic,Partial Moldic,Blocky,Granular,Burial,"Mesoporo grande 0,5 a 1 mm",0.75,1,3,"Dente de cão ao redor de poro móldico. Muita microporosidade, Franja descolada, cto concavo convexo",,MF 1
+PFJ03E,BioRUD,Bc Sand-Shoals,Granule Gravel ,Moderately Sorted,1,Micro Intraparticle,Wp,Blocky,Granular,Burial,"Mesoporo grande 0,5 a 1 mm",0.75,1,3,"conchas quebradas, cto suturados",,MF 1
+PFJ01A,BioPCK,Bc Sand-Shoals,,,3,Partial Moldic,Mo,Blocky,Granular,Burial,Mesoporo muito grande 1 a 4 mm,2.5,4,3,,"Pck bioclastico comalgas verdes, bivalvios e intraclastos cimentados por franja fibrosa e mosaico mesocristalino",MF 1
+PFJ08G,BioFLT,Lagoonal,,,2,Micro Intraparticle,Wp,Blocky,Granular,Burial,Microporo - limite visualização do poro,0.01,0.01,4,,Geopetal,MF 4
+PFJ07F,PelGST,Pel Sand-Shoals,Medium Sand ,Moderately Sorted,2,Vug,Moldic,Blocky,Fibrous to Bladed Fringe,Burial,"Mesoporo muito pequeno 0,125 mm ao limite visualização do poro",0.0625,0.125,4,,,MF 3
+PFJ01E,BioPCK,Bc Sand-Shoals,,,2,Micro Intraparticle,Partial Moldic,Blocky,Granular,Burial,"Mesoporo pequeno 0,125 a 0,25 mm",0.1875,0.25,4,,"concha recristalizado, gastropode, bivalve (recortadinho), foraminifero",MF 1
+PFJ01G1,BioGST,Bc Sand-Shoals,Coarse Sand ,Poorly Sorted,2,Micro Intraparticle,Partial Moldic,Blocky,Syntaxial Overgrowth,Burial,"Mesoporo pequeno 0,125 a 0,25 mm",0.1875,0.25,4,,,MF 1
+PFJ01G2,BioGST,Bc Sand-Shoals,Coarse Sand ,Moderately Sorted,2,Partial Moldic,Micro Intraparticle,Blocky,Syntaxial Overgrowth,Burial,"Mesoporo médio 0,25 a 0,5 mm",0.375,0.5,4,,oolito/oncolito microtizado?,MF 1
+PFJ04B2,BioGST,Bc Sand-Shoals,Very Coarse Sand ,Moderately Sorted,3,Partial Moldic,Intercrystalline,Blocky,Granular,Burial,"Mesoporo médio 0,25 a 0,5 mm",0.375,0.5,4,,,MF 1
+PFJ05C,BioGST,Bc Sand-Shoals,Coarse Sand ,Poorly Sorted,2,Moldic,Partial Moldic,Granular,Fibrous to Bladed Fringe,Meteoric Phreatic,"Mesoporo médio 0,25 a 0,5 mm",0.375,0.5,4,,,MF 1
+PFJ01F,BioRUD,Bc Sand-Shoals,Granule Gravel ,Poorly Sorted,2,Micro Intraparticle,Partial Moldic,Blocky,Granular,Burial,"Mesoporo grande 0,5 a 1 mm",0.75,1,4,Franja Acicular BONITA,"gastropode, craca (Barnacle)",MF 1
+PFJ04A,BioGST,Bc Sand-Shoals,Very Coarse Sand ,Moderately Sorted,2,Moldic,Partial Moldic,Blocky,Syntaxial Overgrowth,Burial,"Mesoporo grande 0,5 a 1 mm",0.75,1,4,cto suturado,,MF 1
+PFJ05A,BioGST,Bc Sand-Shoals,Coarse Sand ,Poorly Sorted,2,Moldic,Partial Moldic,Fibrous to Bladed Fringe,Granular,Marine,"Mesoporo grande 0,5 a 1 mm",0.75,1,4,,,MF 1
+PFJ02A,BioGST,Bc Sand-Shoals,Very Coarse Sand ,Moderately Sorted,1,Moldic,Mo,Blocky,Fibrous to Bladed Fringe,Burial,Mesoporo muito grande 1 a 4 mm,2.5,4,4,Dog Tooth ou bladed ciment? descolado,,MF 1
+PFJ04B1,BioRUD,Bc Sand-Shoals,Granule Gravel ,Moderately Sorted,3,Vug,Partial Moldic,Blocky,Syntaxial Overgrowth,Burial,Mesoporo muito grande 1 a 4 mm,2.5,4,4,"Vug isolado, cto suturado,",,MF 1
+PFJ04C,BioPCK,Bc Sand-Shoals,,,3,Vug,Partial Moldic,Granular,Syntaxial Overgrowth,Meteoric Phreatic,Mesoporo muito grande 1 a 4 mm,2.5,4,4,estilólito,,MF 1
+PFJ03F1,PelGST,Pel Sand-Shoals,Medium Sand ,Moderately Sorted,2,Partial Moldic,Intercrystalline,Fibrous to Bladed Fringe,Granular,Marine,"Mesoporo muito pequeno 0,125 mm ao limite visualização do poro",0.0625,0.125,5,,,MF 2
+PFJ05H1,BioGST,Bc Sand-Shoals,Medium Sand ,Moderately Sorted,2,Vug,Partial Moldic,Fibrous to Bladed Fringe,Granular,Marine,"Mesoporo muito pequeno 0,125 mm ao limite visualização do poro",0.0625,0.125,5,,,MF 1
+PFJ12D,DOLMud,Upper Supratidal,Fine-Medium Crystalline,,2,Moldic,Vug,Dolomitization,Drusy,Eogenetic,"Mesoporo muito pequeno 0,125 mm ao limite visualização do poro",0.0625,0.125,5,,,MF 5b
+PFJ02F,BioRUD,Bc Sand-Shoals,Granule Gravel ,Moderately Sorted,2,Micro Intraparticle,Partial Moldic,Granular,Blocky,Meteoric Phreatic,"Mesoporo pequeno 0,125 a 0,25 mm",0.1875,0.25,5,,gastropode grandao,MF 1
+PFJ03F2,PelGST,Pel Sand-Shoals,Medium Sand ,Moderately Sorted,2,Fracture,Fr-Vug,Blocky,Granular,Burial,"Mesoporo grande 0,5 a 1 mm",0.75,1,5,"2 lentes, fr, conchas quebradas",,MF 2
+PFJ05H2,BioGST,Bc Sand-Shoals,Medium Sand ,Moderately Sorted,2,Moldic,Partial Moldic,Fibrous to Bladed Fringe,Granular,Marine,"Mesoporo grande 0,5 a 1 mm",0.75,1,5,,,MF 1
+PFJ06A1,PelGST,Pel Sand-Shoals,Fine Sand ,Moderately Sorted,1,Vug,Moldic,Syntaxial Overgrowth,Granular,Marine,"Mesoporo grande 0,5 a 1 mm",0.75,1,5,,,MF 2
+PFJ06A2,PelGST,Pel Sand-Shoals,Fine Sand ,Moderately Sorted,1,Moldic,Vug,Syntaxial Overgrowth,Fibrous to Bladed Fringe,Marine,"Mesoporo grande 0,5 a 1 mm",0.75,1,5,,,MF 2
+PFJ07D1,PelGST,Pel Sand-Shoals,Medium Sand ,Poorly Sorted,3,Fracture,Partial Moldic,Syntaxial Overgrowth,Fibrous to Bladed Fringe,Marine,"Mesoporo grande 0,5 a 1 mm",0.75,1,5,estilolitos / cimento telo,,MF 3
+PFJ07D2,PelGST,Pel Sand-Shoals,Medium Sand ,Poorly Sorted,3,Fracture,Vug,Syntaxial Overgrowth,Fibrous to Bladed Fringe,Marine,"Mesoporo grande 0,5 a 1 mm",0.75,1,5,estilolitos / cimento telo/ coquinas,,MF 3
+PFJ11D,DOLBind/Mud,Lower Supratidal,Fine Crystalline,,2,Fenestral,Fen-Vug,Dolomitization,Drusy,Eogenetic,"Mesoporo grande 0,5 a 1 mm",0.75,1,5,lami micritica dolomitizada - eodiagenese,,MF 8
+PFJ12C1,DOLMud,Upper Supratidal,Fine-Medium Crystalline,,2,Intercrystalline,Vug,Dolomitization,Drusy,Pedogenesis,"Mesoporo grande 0,5 a 1 mm",0.75,1,5,pedogenese,,MF 5c
+PFJ12C2,DOLMud,Upper Supratidal,Fine-Medium Crystalline,,2,Fracture,Vug,Dolomitization,,Pedogenesis,Mesoporo muito grande 1 a 4 mm,2.5,4,5,,,MF 5c
+PFJ07E1,BioRUD,Bc Sand-Shoals,Granule Gravel ,Poorly Sorted,2,Moldic,Intraparticle,Granular,Blocky,Meteoric Phreatic,"Mesoporo muito pequeno 0,125 mm ao limite visualização do poro",0.0625,0.125,7,,,MF 1
+PFJ07E2,BioGST,Bc Sand-Shoals,Very Coarse Sand ,Moderately Sorted,2,Partial Moldic,Moldic,Granular,Blocky,Meteoric Phreatic,"Mesoporo grande 0,5 a 1 mm",0.75,1,7,,,MF 1
+PFJ08L,BioGST,Bc Sand-Shoals,Coarse Sand ,Very Well Sorted,2,Partial Moldic,Micro Intraparticle,Blocky,Syntaxial Overgrowth,Burial,"Mesoporo médio 0,25 a 0,5 mm",0.375,0.5,8,,,MF 1
+PFJ07A1,PelGST,Pel Sand-Shoals,Medium Sand ,Poorly Sorted,3,Fracture,Moldic,Syntaxial Overgrowth,Fibrous to Bladed Fringe,Marine,"Mesoporo grande 0,5 a 1 mm",0.75,1,8,estilolitos,,MF 3
+PFJ07A2,PelGST,Pel Sand-Shoals,Medium Sand ,Moderately Sorted,3,Fracture,Vug,Syntaxial Overgrowth,Fibrous to Bladed Fringe,Marine,"Mesoporo grande 0,5 a 1 mm",0.75,1,8,,,MF 3
+PFJ09F,BioGST,Bc Sand-Shoals,Very Coarse Sand ,Poorly Sorted,2,Micro Intraparticle,Moldic,Syntaxial Overgrowth,Fibrous to Bladed Fringe,Marine,Microporo - limite visualização do poro,0.01,0.01,10,,,MF 1
+PFJ03I,PelPCK,Pel Sand-Shoals,,,2,Micro Intraparticle,Moldic,Granular,Syntaxial Overgrowth,Marine,"Mesoporo muito pequeno 0,125 mm ao limite visualização do poro",0.0625,0.125,10,,,MF 2
+PFJ07C2,PelGST,Pel Sand-Shoals,Coarse Sand ,Moderately Sorted,3,Fracture,Vug,Syntaxial Overgrowth,Fibrous to Bladed Fringe,Marine,"Mesoporo pequeno 0,125 a 0,25 mm",0.1875,0.25,10,,,MF 3
+PFJ01C2,Bind,Cave deposit,,,0,Vug,Vug,Syntaxial Overgrowth,,Telogenetic,"Mesoporo médio 0,25 a 0,5 mm",0.375,0.5,10,,,MF 10
+PFJ07C1,PelGST,Pel Sand-Shoals,Coarse Sand ,Poorly Sorted,3,Partial Moldic,Vug,Syntaxial Overgrowth,Fibrous to Bladed Fringe,Marine,"Mesoporo médio 0,25 a 0,5 mm",0.375,0.5,10,estilolitos / cimento telo/ coquinas,,MF 3
+PFJ01C1,Bind,Cave deposit,,,0,Vug,Interparticle,Isopachous,,Telogenetic,"Mesoporo grande 0,5 a 1 mm",0.75,1,10,,,MF 10
+PFJ02K,BioGST,Bc Sand-Shoals,Very Coarse Sand ,Poorly Sorted,3,Micro Intraparticle,Wp,Blocky,Granular,Burial,"Mesoporo grande 0,5 a 1 mm",0.75,1,10,"Grão fraturados, contato suturados","miliolidio, oolito",MF 1
+PFJ06F,PelGST,Pel Sand-Shoals,Fine Sand ,Well Sorted,1,Fracture,Vug,Granular,Fibrous to Bladed Fringe,Meteoric Phreatic,"Mesoporo grande 0,5 a 1 mm",0.75,1,10,,,MF 2
+PFJ11E1,DOLMud,Upper Supratidal,Fine Crystalline,,2,Fenestral,fen,Dolomitization,,Eogenetic,Mesoporo muito grande 1 a 4 mm,2.5,4,10,"11E1, supramaré, raiz - granificação",,MF 9
+PFJ11E2,DOLMud,Upper Supratidal,Fine Crystalline,,2,Fenestral,Vug,Dolomitization,,Eogenetic,Mesoporo muito grande 1 a 4 mm,2.5,4,10,,,MF 9
+PFJ06J,PelGST,Pel Sand-Shoals,,,2,Vug,Moldic,Syntaxial Overgrowth,Fibrous to Bladed Fringe,Marine,"Mesoporo muito pequeno 0,125 mm ao limite visualização do poro",0.0625,0.125,11,,,MF 2
+PFJ06I,PelGST,Pel Sand-Shoals,,,,Vug,Moldic,,,,,,,11,,,MF 2
+PFJ11J,DOLWck,Lower Intertidal,Fine-Medium Crystalline,,2,Moldic,Mo-Bc,Dolomitization,Granular,Eogenetic,"Mesoporo pequeno 0,125 a 0,25 mm",0.1875,0.25,14,GST peloidal,,MF 6
+PFJ03H,PelPCK,Pel Sand-Shoals,,,1,Micro Intraparticle,Micro Intraparticle,Granular,Syntaxial Overgrowth,Marine,Microporo - limite visualização do poro,0.01,0.01,15,,,MF 2
+PFJ09H,BioPCK,Bc Sand-Shoals,,,2,Micro Intraparticle,Vug,Granular,Syntaxial Overgrowth,Meteoric Phreatic,Microporo - limite visualização do poro,0.01,0.01,15,,,MF 1
+PFJ03K,PelPCK,Pel Sand-Shoals,,,2,Micro Intraparticle,Wp,Granular,Blocky,Meteoric Phreatic,"Mesoporo muito pequeno 0,125 mm ao limite visualização do poro",0.0625,0.125,15,"Geopetal, pequenas fraturas",,MF 2
+PFJ03L,PelGST,Pel Sand-Shoals,Fine Sand ,Well Sorted,1,Micro Intraparticle,Moldic,Blocky,Granular,Burial,"Mesoporo muito pequeno 0,125 mm ao limite visualização do poro",0.0625,0.125,15,,,MF 2
+PFJ11A1,DOLBind/Mud,Upper intertidal,Fine-Medium Crystalline,,2,Intercrystalline,Moldic,Dolomitization,,Eogenetic,"Mesoporo médio 0,25 a 0,5 mm",0.375,0.5,17,poro moldico,,MF 7
+PFJ11A2,DOLBind/Mud,Upper intertidal,Fine-Medium Crystalline,,2,Intercrystalline,Bc,Dolomitization,,Eogenetic,"Mesoporo grande 0,5 a 1 mm",0.75,1,17,,,MF 7
+PFJ11K,DOLMud,Lower Intertidal,Fine Crystalline,,2,Fracture,Fr-Wc,Dolomitization,Dolomitization,Eogenetic,"Mesoporo muito pequeno 0,125 mm ao limite visualização do poro",0.0625,0.125,20,,,MF 6
+PFJ05D1,BioGST,Bc Sand-Shoals,Coarse Sand ,Very Poorly Sorted,1,Partial Moldic,Moldic,Fibrous to Bladed Fringe,Blocky,Marine,"Mesoporo médio 0,25 a 0,5 mm",0.375,0.5,20,,,MF 1
+PFJ05D2,BioGST,Bc Sand-Shoals,Coarse Sand ,Very Well Sorted,1,Partial Moldic,Micro Intraparticle,Fibrous to Bladed Fringe,Blocky,Marine,"Mesoporo médio 0,25 a 0,5 mm",0.375,0.5,20,,,MF 1
+PFJ01B,Bind,Cave deposit,,,0,Vug,Vug,Syntaxial Overgrowth,,Telogenetic,Mesoporo muito grande 1 a 4 mm,2.5,4,20,,,MF 10
+PFJ11B,DOLBind/Mud,Upper intertidal,Medium Crystalline,,2,Intercrystalline,Bc,Dolomitization,,Eogenetic,Mesoporo muito grande 1 a 4 mm,2.5,4,20,,,MF 7
+PFJ11C2,DOLBind/Mud,Upper intertidal,Medium Crystalline,,2,Vug,Vug-Bc,Dolomitization,,Eogenetic,Mesoporo muito grande 1 a 4 mm,2.5,4,20,,,MF 7
+PFJ06H1,PelGST,Pel Sand-Shoals,,,1,Vug,Moldic,Syntaxial Overgrowth,Fibrous to Bladed Fringe,Marine,"Mesoporo pequeno 0,125 a 0,25 mm",0.1875,0.25,22,,,MF 2
+PFJ06H2,PelGST,Pel Sand-Shoals,,,1,Vug,Moldic,Syntaxial Overgrowth,Fibrous to Bladed Fringe,Marine,"Mesoporo pequeno 0,125 a 0,25 mm",0.1875,0.25,22,,,MF 2
+PFJ11I,DOLBind/Mud,Lower Supratidal,Fine Crystalline,,2,Intracrystalline,Wc,Dolomitization,Blocky,Eogenetic,"Mesoporo médio 0,25 a 0,5 mm",0.375,0.5,25,comcomitante com crescimento de DOL,,MF 8
+PFJ11H,DOLMud,Upper intertidal,Medium Crystalline,,2,Intracrystalline,Wc,Dolomitization,,Eogenetic,"Mesoporo grande 0,5 a 1 mm",0.75,1,25,"11H - na base,PCK como 11G - Topo comsuperficie erosiva, com infiltração... preenchendo os poros...",,MF 7
+PFJ06E,PelPCK,Pel Sand-Shoals,,,2,Moldic,Vug,Syntaxial Overgrowth,Granular,Marine,"Mesoporo pequeno 0,125 a 0,25 mm",0.1875,0.25,27,,,MF 2
+PFJ06D,PelPCK,Pel Sand-Shoals,,,2,Vug,Moldic,Syntaxial Overgrowth,Granular,Marine,Megaporo pequeno 4 a 32 mm,18,32,28,,,MF 2
+PFJ11F,DOLMud,Lower Intertidal,Fine-Medium Crystalline,,2,Moldic,Intercrystalline,Dolomitization,,Eogenetic,"Mesoporo grande 0,5 a 1 mm",0.75,1,30,,,MF 6
+PFJ06G,PelGST,Pel Sand-Shoals,,,1,Moldic,Vug,Syntaxial Overgrowth,Fibrous to Bladed Fringe,Marine,"Mesoporo pequeno 0,125 a 0,25 mm",0.1875,0.25,32,,,MF 2
+PFJ12B,DOLMud,Upper Supratidal,Fine-Medium Crystalline,,2,Vug,Vug-Bc,Dolomitization,Drusy,Pedogenesis,"Mesoporo grande 0,5 a 1 mm",0.75,1,35,,,MF 5b
+PFJ01D1,BioGST,Bc Sand-Shoals,Very Coarse Sand ,Moderately Sorted,2,Partial Moldic,Moldic,Blocky,Fibrous to Bladed Fringe,Burial,"Mesoporo grande 0,5 a 1 mm",0.75,1,40,,"Gastropode com parede recristalizada, intraclastos",MF 1
+PFJ01D2,BioGST,Bc Sand-Shoals,Very Coarse Sand ,Moderately Sorted,2,Partial Moldic,Moldic,Blocky,Granular,Burial,"Mesoporo grande 0,5 a 1 mm",0.75,1,40,,,MF 1
+PFJ07G,PelPCK,Pel Sand-Shoals,,,2,Vug,Moldic,Drusy,Syntaxial Overgrowth,Burial,Mesoporo muito grande 1 a 4 mm,2.5,4,40,,,MF 2
+PFJ11G,DOLWck,Upper intertidal,Medium Crystalline,,2,Intracrystalline,,Dolomitization,,Eogenetic,Microporo - limite visualização do poro,0.01,0.01,45,,,MF 7
+PFJ07B2.1,PelGST,Pel Sand-Shoals,Fine Sand ,Moderately Sorted,3,Vug,Moldic,Syntaxial Overgrowth,Fibrous to Bladed Fringe,Marine,"Mesoporo grande 0,5 a 1 mm",0.75,1,70,estilolitos / cimento telo /tuffa / alteração,,MF 3
+PFJ07B2.2,PelGST,Pel Sand-Shoals,Fine Sand ,Moderately Sorted,3,Vug,Moldic,Syntaxial Overgrowth,Fibrous to Bladed Fringe,Marine,"Mesoporo grande 0,5 a 1 mm",0.75,1,70,estilolitos / cimento telo,,MF 3
+PFJ07B,PelGST,Pel Sand-Shoals,Fine Sand ,Moderately Sorted,3,Fracture,Fr-Vug,Syntaxial Overgrowth,Fibrous to Bladed Fringe,Marine,Megaporo pequeno 4 a 32 mm,18,32,77,estilolitos,,MF 3
+PFJ01K,BioGST,Bc Sand-Shoals,Granule Gravel ,Poorly Sorted,3,Partial Moldic,Micro Intraparticle,Blocky,,,,,,,,,MF 1
+PFJ09I,BioPCK,Bc Sand-Shoals,,,,,,,,,,,,,,,
+PFJ11_1_A,Bind,Cave deposit,,,0,Growth-Framework,Growth-Framework,Syntaxial Overgrowth,,,,,,,,,MF 10
+PFJ11_1_B,Bind,Cave deposit,,,0,Growth-Framework,Growth-Framework,Syntaxial Overgrowth,,,,,,,,,MF 10
+PFJ11_1_C,Bind,Cave deposit,,,0,Vug,Growth-Framework,Isopachous,,,,,,,,,MF 10
+PFJ11_1_D,Bind,Cave deposit,,,0,Growth-Framework,Growth-Framework,Syntaxial Overgrowth,,,,,,,,,MF 10
+PFJ11_1_E,Bind,Cave deposit,,,0,Growth-Framework,Growth-Framework,Syntaxial Overgrowth,,,,,,,,,MF 10
+PFJ11_1_F,Bind,Cave deposit,,,0,Growth-Framework,Growth-Framework,Syntaxial Overgrowth,,,,,,,,,MF 10
+PFJ11_1_G,Bind,Cave deposit,,,0,Growth-Framework,Growth-Framework,Syntaxial Overgrowth,,,,,,,,,MF 10
+PFJ11_1_H,Bind,Cave deposit,,,0,Growth-Framework,Growth-Framework,Syntaxial Overgrowth,,,,,,,,,MF 10
+PFJ03Hv,,,,,,,,,,,,,,,,,Vein
+PFJ09Fv,,,,,,,,,,,,,,,,,Vein
+PFJ09J1v,,,,,,,,,,,,,,,,,Vein
+PFJ09Hv,,,,,,,,,,,,,,,,,Vein
+PFJ09Kv,,,,,,,,,,,,,,,,,Vein
+PFJ12Gv,,,,,,,,,,,,,,,,,Vein
