@@ -7,7 +7,7 @@
 
 Trabalho apresentado ao curso [BI MASTER](https://ica.puc-rio.ai/bi-master) como pré-requisito para conclusão de curso e obtenção de crédito na disciplina "Projetos de Sistemas Inteligentes de Apoio à Decisão".
 
-- [Link para o código](https://github.com/link_do_repositorio/nome_do_arquivo_de_codigo).
+- [Link para o código](Machine_on_Rocks.ipynb).
 
 - Trabalhos relacionados:
     - [BAGNI, Fábio Luiz. O Carste Jandaíra, Bacia Potiguar, e suas implicações para a qualidade de reservatórios. 2021. 216f. Tese (Doutorado em Geodinâmica e Geofísica) - Centro de Ciências Exatas e da Terra, Universidade Federal do Rio Grande do Norte, Natal, 2021.](https://repositorio.ufrn.br/handle/123456789/45438)
