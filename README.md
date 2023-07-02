@@ -27,8 +27,7 @@ Donec molestie, ante quis tempus consequat, mauris ante fringilla elit, euismod 
 
 A geologia do petróleo e petrofísica são áreas com variados tipos de dados, desde textos como às descrições petrográficas (de rocha), variáveis categóricas como classificação de rocha e dados numéricos como ensaios laboratoriais e perfis de poços, além de imagens 2D e 3D (Xu et al 2019 e McDonald, 2021). A análise integrada dessa variedades de dados gera uma oportunidade para aplicação de técnicas de inteligência artificial e que foi bem resumido por Cuddy (2021).
 
-Essa prova de conceito tem como objetivo aplicar o uso de técnicas de agrupamento e classificação em um processo de avaliação de rocha carbonáticas cartificadas análogas a reservatórios de petróleo no qual integra descrição petrográfica, análise laboratoriais de petrofisica e geoquímica com objetivo de criar grupos de rochas com características semelhantes para armazenamento e fluxo de fluido e posterior classificação de fácies de rochas. A metodologia proposta é uma adaptação do trabalho de Ippolito et al (2021) no qual combina o método supervisionados e não-supervisionado para a geração de classes de rocha.
-
+Essa prova de conceito tem como objetivo aplicar técnicas de agrupamento e classificação em um processo de avaliação de rocha carbonáticas carstificadas análogas a reservatórios de petróleo para criar grupos de rochas com características semelhantes para armazenamento de petróleo e fluxo de fluido e posterior classificação de fácies de rochas. 
 
 ### 2. Modelagem
 
@@ -189,6 +188,10 @@ Esses dados também podem ser obtidos de análise de imagem 2D de lâminas petro
 
 ### _Referências Bibliográficas_
 
+Xu, C., Misra, S., Srinivasan, P., Ma, S. 2019. When petrophysics meets big data: what can machine do?. Bahrain: SPE Middle Est Oil and gas Show and Conference. SPE-195068-MS
+
+McDonald, A. 2021. Data quality considerations for petrophysical machine learning models. SPWLA: 62nd annual logging symposium. SPE-195068-MS.
+
 Amaefule, J.O., Altunbay, M., Tiab, D., Kersey, D.G., Keelan, D. 1993. Enhanced reservoir description: using core and log data to identify hydraulic (flow) units and predict permeability in uncored interval/wells. Houston: SPE 68th annual technical conference. SPE-26436.
 
 Bruce, P., Bruce, A. 2019. Estatística prática para cientistas de dados: 50 conceitos essenciais, tradução Luciana Ferraz. Rio de Janeiro: Alta Books. 320p.
@@ -197,13 +200,8 @@ Cuddy, S. 2021. The benefits and dangers of using artificial intelligences in pe
 
 Evsukoff, A.G. 2020. Inteligência computacional: fundamentos e aplicações [recurso eletrônico]. 1ed. Rio de Janeiro: e-papers
 
-Ippolito, M., Fergunson, J., Jenson, F. 2021. Improving facies prediction by combining supervised and unsupervised learning methods. Journal of Petroleum Science and Engineering (200). 108300.
-
-McDonald, A. 2021. Data quality considerations for petrophysical machine learning models. SPWLA: 62nd annual logging symposium. SPE-195068-MS.
-
 Pedregosa, F., Varoquaux, G., Gramfort, A. Michel, V., Thirion, B., Grisel, O., Blondel, M. Prettenhofer, P., Weiss, R., Dubourg, V., Vanderplas, J., Passos, A., Cournapeau, D., Brucher, M., Perrot, M., Duchesnay, E. 2011. Scikit-learn: Machine Learning in Python. Journal of Machine Learning Research v12: 2825-2830.
 
-Xu, C., Misra, S., Srinivasan, P., Ma, S. 2019. When petrophysics meets big data: what can machine do?. Bahrain: SPE Middle Est Oil and gas Show and Conference. SPE-195068-MS
 
 ---
 
