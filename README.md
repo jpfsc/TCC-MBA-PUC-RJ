@@ -10,7 +10,6 @@ Trabalho apresentado ao curso [BI MASTER](https://ica.puc-rio.ai/bi-master) como
 - [Link para o código](Machine_on_Rocks.ipynb).
 
 - Trabalhos relacionados:
-    - [BAGNI, Fábio Luiz. O Carste Jandaíra, Bacia Potiguar, e suas implicações para a qualidade de reservatórios. 2021. 216f. Tese (Doutorado em Geodinâmica e Geofísica) - Centro de Ciências Exatas e da Terra, Universidade Federal do Rio Grande do Norte, Natal, 2021.](https://repositorio.ufrn.br/handle/123456789/45438)
     - [Bagni et al. 2022. Karstified layer and caves formed by superposed epigenetic dissolution along subaerial unconformities in carbonate rocks - Impact on reservoir-scale permeability. Marine and Petroleum Geology: 138](https://doi.org/10.1016/j.marpetgeo.2022.105523)
 
 ---
@@ -60,15 +59,18 @@ Descrição da base de dados utilizados:
 * Kabs (mD):  númerico, permeabilidade em miliDarcy proveniente da análise petrofísica
 * GrainDensity (g/cc):  númerico, média da massa específica do grão em g/cm3 proveniente da análise petrofísica
 
+**Modelagem de Fácies Petrofísica (_Petrophysical Rock-Type_, PRT)**
+
+(Comentar aplicação de Amaefule para construção de FZI)
+
+
 #### 2.2 Seleção de atributos
 
 A análise exploratória dos dados mostra uma relação não linear com a permeabilidade e FZI por isso adotou-se a correlação de Sprearman para analisar o grau de dependência das variáveis.
 
-(Figura: Correlação Sprearman: devido a relações não lineares de permeabilidade e FZI)
-
 Para a modelagem de fáceis petrofísicas (Petrophysical Rock Type, PRT) por agrupamento foram selecionados variáveis categóricas de “tipo de poro” e “tamanho de poro” e variáveis numéricas  “porosidade” (Phi, fraction), “massa específica de grão (GrainDensity, g/cc)” e “permeabilidade” (Kabs, mD). Essas variáveis são utilizadas historicamente na modelagem de fácies petrofísicas por métodos convencionais (Lucia e Amaefule 1993). Na figura XX mostra um gráfico de dispersão relacionando porosidade (no X) com a permeabilidade (no Y) e usando como rótulos o tipo de poro e a média do tamanho de poro como tamanho do símbolo do rótulo. Nota-se a relação não-linear forte entre porosidade e permeabilidade
 
-(Figura: Gráfico phi x K / tipo de poro e tamanho do poro)
+![Scatter plot: Phix K](figures/XPLOT_Phi_x_K.png)
 
 Para a classificação de fácies sedimentares (litofácies), foram selecionados às variáveis categóricas relacionados a litologia e mineralogia, tais como  “litologia”, “tamanho de grão”, “seleção de grão”, “tipo de cimento”,  e numéricas da análise geoquímica  “teor de minerais siliciclásticos, QFM”, “Teor de calcita” e "teor de dolomita”.  Foi inserido o grupo de “PRT KHierarquico” definido na etapa anterior 
 
@@ -78,7 +80,7 @@ O pré-processamento foi o mesmo adotado para os modelos de agrupamento.
 
 Desse modo adotou-se um fluxo de pré-processamento dos dados separando em dados categóricos, numéricos lineares e numéricos não-linear conforme o fluxo da figura abaixo.
 
-(Figura: pipeline de pre-processamento)
+![Fluxo de pré-processamento (_Pipeline_)](figures/PreProccesPipeline.png)
 
 **Modelagem dos grupos de Fácies Petrofísica (Petrophysical Rock Type, PRT)**
 
@@ -95,7 +97,7 @@ A especificação do número ideal de grupos para aplicação no algoritmo de K-
    
 A figura XX mostra os gráficos gerados e a identificação de número otimizado de grupos sendo 6 de modo a melhor atender os critérios. 
 
-(Figura: gráficos de análise do número otimo de grupos)
+![Melhor numero de grupos com Kmeans](figures/Best_Cluster_Number.png)
 
 Modelo Kmeans Hyper-parametros:
 N_clusters = 6
@@ -110,67 +112,52 @@ Foi utilizado o corte de distância (distance_threshold) = 10
 **Abordagem para classificação de fácies**
 
 Foi realizado uma separação entre dado de treino (70% dos dados) e teste;
-sendo necessário realizar um balanceamento das amostras utilizando a técnica de naive random over-sampling
+
 Devido a número muito baixo de amostras, adotou-se uma associação de microfácies com base na descrição detalhada de Bagni (2021) e foi necessário adotar um balanceamento através do algoritmo de naive random over-sampling
 
-(Figura: gráfico de barras do número de amostras antes e após-balanceamento)
+![Balanceamento (Data augmentation) com o Random Over Sampler](figures/Balanceamento.png)
 
 Seleção de modelo por busca de melhores hiper-parâmetros para os algoritmos de Decision Tree e Random Forest
 
-Melhores hyper-parâmetros para Decision Tree:
-Critério: gini
-Max_depth = 12
-Min_samples_leaf = 1
-
-Melhores hyper-parâmetros para Random Forest:
-Critério: gini
-Max_depth =  8
-Min_samples_leaf = 1
-N_estimators = 100
-
+Hiper-parâmetro   |  Decision Tree | Random Forest
+--------          | -----------    | ------
+Critério          | gini           |  gini
+Max_depth         | 12             |  8
+Min_samples_leaf  | 1              | 1
+N_estimators      |                | 100
 
 
 ### 3. Resultados
 
 Análise de performance dos modelos de agrupamento: 
 
-Modelo de agrupamento Kmeans
-Rand Index: 0,676
-Homogeneity Score: 0,242
-Completeness Score: 0,221
-V Measure Score: 0,231
-
-(Figura: comparação conceptçaõ geologo x machine learning)
-
-Modelo de agrupamento K hierárquico aglomerativo
-Rand Index: 0,689
-Homogeneity Score: 0,328
-Completeness Score: 0,205
-V Measure Score: 0,252
-
-(Figura: comparação conceptçaõ geologo x machine learning)
+Métrica            | Agrupamento Kmeans | Hierárquico Aglomerativo
+--------           | -------------      | ---------------
+Rand Index         | 0,676              | 0,689
+Homogeneity Score  | 0,242              | 0,328
+Completeness Score | 0,221              | 0,205
+V Measure Score    | 0,231              | 0,252
 
 Esses parâmetros não são muitos diferentes e não ajudam muito a avaliação, portanto foi adotado a comparação de boxplots com as prpriedaes...
 
 (Figura: boxplots)
 
-Dendograma do hierarquico
+![Dendogram do modelo Hierárquico Aglomerativo](figures/Khierarchical_Dendogram.png)
 
-Análise de performance dos modelos de classificação: 
+**Análise de performance dos modelos de classificação**
 
-Modelo de classificação Decision Tree
-Acurácia: 0,681
-Acurácia Ponderada: 0,745
-Kappa: 0,569
-F1: 0,718
-(Figura matrix de confusão e features selxtion)
+Métrica            | Decision Tree | Random Forest
+-----------        | ------------  | ------------
+Acurácia           | 0,681         | 0,872
+Acurácia Ponderada | 0,745         | 0,895
+Kappa              | 0,569         | 0,811
+F1                 | 0,718         | 0,888
 
-Modelo de classificação Random Forest
-Acurácia: 0,872
-Acurácia Ponderada: 0,895
-Kappa: 0,811
-F1: 0,888
-(Figura matrix de confusão e features selxtion)
+(Figura Decision Tree: matrix de confusão e features selection)
+
+(Figura Random Forest: matrix de confusão e features selection)
+
+
 
 ### 4. Conclusões
 
@@ -188,20 +175,21 @@ Esses dados também podem ser obtidos de análise de imagem 2D de lâminas petro
 
 ### _Referências Bibliográficas_
 
-Xu, C., Misra, S., Srinivasan, P., Ma, S. 2019. When petrophysics meets big data: what can machine do?. Bahrain: SPE Middle Est Oil and gas Show and Conference. SPE-195068-MS
-
-McDonald, A. 2021. Data quality considerations for petrophysical machine learning models. SPWLA: 62nd annual logging symposium. SPE-195068-MS.
-
 Amaefule, J.O., Altunbay, M., Tiab, D., Kersey, D.G., Keelan, D. 1993. Enhanced reservoir description: using core and log data to identify hydraulic (flow) units and predict permeability in uncored interval/wells. Houston: SPE 68th annual technical conference. SPE-26436.
+
+[Bagni, F.L. O Carste Jandaíra, Bacia Potiguar, e suas implicações para a qualidade de reservatórios. 2021. 216f. Tese (Doutorado em Geodinâmica e Geofísica) - Centro de Ciências Exatas e da Terra, Universidade Federal do Rio Grande do Norte, Natal, 2021.](https://repositorio.ufrn.br/handle/123456789/45438)
 
 Bruce, P., Bruce, A. 2019. Estatística prática para cientistas de dados: 50 conceitos essenciais, tradução Luciana Ferraz. Rio de Janeiro: Alta Books. 320p.
 
 Cuddy, S. 2021. The benefits and dangers of using artificial intelligences in petrophysics. Artificial Intelligence in Geoscienses (2): 1-10.
 
-Evsukoff, A.G. 2020. Inteligência computacional: fundamentos e aplicações [recurso eletrônico]. 1ed. Rio de Janeiro: e-papers
+Evsukoff, A.G. 2020. Inteligência computacional: fundamentos e aplicações [[recurso eletrônico](http://www.e-papers.com.br/produtos.asp?codigo_produto=3168)]. 1ed. Rio de Janeiro: e-papers 
+
+McDonald, A. 2021. Data quality considerations for petrophysical machine learning models. SPWLA: 62nd annual logging symposium. SPE-195068-MS.
 
 Pedregosa, F., Varoquaux, G., Gramfort, A. Michel, V., Thirion, B., Grisel, O., Blondel, M. Prettenhofer, P., Weiss, R., Dubourg, V., Vanderplas, J., Passos, A., Cournapeau, D., Brucher, M., Perrot, M., Duchesnay, E. 2011. Scikit-learn: Machine Learning in Python. Journal of Machine Learning Research v12: 2825-2830.
 
+Xu, C., Misra, S., Srinivasan, P., Ma, S. 2019. When petrophysics meets big data: what can machine do?. Bahrain: SPE Middle Est Oil and gas Show and Conference. SPE-195068-MS
 
 ---
 
