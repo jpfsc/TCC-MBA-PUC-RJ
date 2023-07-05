@@ -1,4 +1,4 @@
-# Machine on Rocks: uso de machine learning para avaliação geológica e petrofísica de rocha reservatório de petróleo
+# Machine on Rocks: uso de machine learning para análise geológica e petrofísica de rocha reservatório de petróleo
 
 #### Aluno: [João Paulo Teixeira da Fonseca](https://github.com/jpfsc).
 #### Orientadora: [Dra. Manoela Rabello Kohler](https://github.com/manoelakohler).
@@ -26,12 +26,11 @@ Essa prova de conceito tem como objetivo aplicar técnicas de agrupamento e clas
 
 ### 2. Modelagem
 
-A modelagem consiste de 4 etapas descritas a seguir:
+A modelagem consiste de 3 etapas descritas a seguir:
 
 1. Condicionamento da base de dados
-2. Análise Exploratória
-3. Seleção de atributos
-4. Inferência
+2. Análise Exploratória e Seleção de atributos
+3. Inferência
 
 Foi utilizado principalmente a biblioteca SciKit-Learn (Pedregosa et al, 2011), versão 1.2.2.
 
@@ -62,16 +61,25 @@ Descrição da base de dados utilizados:
 
 Foi aplicado a modelagem petrofísica conforme realizado em Bagni _et al_ (2022) para obtenção de propriedades relacionados a fácies petrofísicas com o método proposto por Amaefule _et al_ (1993).
 
-#### 2.2 Análise Exploratória
+#### 2.2 Análise Exploratória e Seleção de atributos
 
-A análise exploratória dos dados mostra uma relação não linear com a permeabilidade e FZI por isso adotou-se a correlação de Sprearman para analisar o grau de dependência das variáveis.
+A análise exploratória dos dados mostra uma relação não linear da porosidade com a permeabilidade e FZI por isso adotou-se a correlação de Sprearman para analisar o grau de dependência das variáveis.
 
 ![Scatter plot: Phix K](figures/XPLOT_Phi_x_K.png)
 
 `Figura: Porosidade x Permeabilidade e por tipo e tamanho de poro`
 
-#### 2.3 Seleção de atributos
 
+**Agrupamento de Fácies Petrofísicas**
+Para a modelagem de fáceis petrofísicas (Petrophysical Rock Type, PRT) por agrupamento foram selecionados variáveis categóricas de “tipo de poro” e “tamanho de poro” e variáveis numéricas  “porosidade” (Phi, fraction), “massa específica de grão (GrainDensity, g/cc)” e “permeabilidade” (Kabs, mD). Essas variáveis são utilizadas historicamente na modelagem de fácies petrofísicas por métodos convencionais (Lucia e Amaefule 1993). Na figura XX mostra um gráfico de dispersão relacionando porosidade (no X) com a permeabilidade (no Y) e usando como rótulos o tipo de poro e a média do tamanho de poro como tamanho do símbolo do rótulo. Nota-se a relação não-linear forte entre porosidade e permeabilidade
+
+
+**Classificação de fácies geológicas**
+Para a classificação de fácies sedimentares (litofácies), foram selecionados às variáveis categóricas relacionados a litologia e mineralogia, tais como  “litologia”, “tamanho de grão”, “seleção de grão”, “tipo de cimento”,  e numéricas da análise geoquímica  “teor de minerais siliciclásticos, QFM”, “Teor de calcita” e "teor de dolomita”.  Foi inserido o grupo de “PRT KHierarquico” definido na etapa anterior 
+
+#### 2.4 Inferências
+
+**Pré-processamento**
 O pré-processamento foi o mesmo adotado para os modelos de agrupamento.
 
 Desse modo adotou-se um fluxo de pré-processamento dos dados separando em dados categóricos, numéricos lineares e numéricos não-linear conforme o fluxo da figura abaixo.
@@ -84,14 +92,7 @@ Devido a número muito baixo de amostras, adotou-se uma associação de microfá
 
 ![Balanceamento (Data augmentation) com o Random Over Sampler](figures/Balanceamento.png)
 
-**Agrupamento de Fácies Petrofísicas**
-Para a modelagem de fáceis petrofísicas (Petrophysical Rock Type, PRT) por agrupamento foram selecionados variáveis categóricas de “tipo de poro” e “tamanho de poro” e variáveis numéricas  “porosidade” (Phi, fraction), “massa específica de grão (GrainDensity, g/cc)” e “permeabilidade” (Kabs, mD). Essas variáveis são utilizadas historicamente na modelagem de fácies petrofísicas por métodos convencionais (Lucia e Amaefule 1993). Na figura XX mostra um gráfico de dispersão relacionando porosidade (no X) com a permeabilidade (no Y) e usando como rótulos o tipo de poro e a média do tamanho de poro como tamanho do símbolo do rótulo. Nota-se a relação não-linear forte entre porosidade e permeabilidade
 
-
-**Classificação de fácies geológicas**
-Para a classificação de fácies sedimentares (litofácies), foram selecionados às variáveis categóricas relacionados a litologia e mineralogia, tais como  “litologia”, “tamanho de grão”, “seleção de grão”, “tipo de cimento”,  e numéricas da análise geoquímica  “teor de minerais siliciclásticos, QFM”, “Teor de calcita” e "teor de dolomita”.  Foi inserido o grupo de “PRT KHierarquico” definido na etapa anterior 
-
-#### 2.4 Inferências
 
 **Modelagem dos grupos de Fácies Petrofísica (Petrophysical Rock Type, PRT)**
 
