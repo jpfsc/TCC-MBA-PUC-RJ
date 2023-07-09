@@ -35,6 +35,7 @@ A modelagem consiste de 3 etapas descritas a seguir:
 Foi utilizado principalmente a biblioteca SciKit-Learn (Pedregosa et al, 2011), versão 1.2.2.
 
 #### 2.1 Condicionamento da base de dados
+
 Para esse trabalho utilizou-se de descrição petrográfica de rochas carbonáticas e análises laboratoriais de geoquímica e petrofísica básica realizadas em 157 amostras de rocha carbonática carstificada e publicadas em Bagni (2021).
 
 Descrição da base de dados utilizados:
@@ -65,36 +66,31 @@ Foi aplicado a modelagem petrofísica conforme realizado em Bagni _et al_ (2022)
 
 A análise exploratória dos dados mostra uma relação não linear da porosidade com a permeabilidade e FZI por isso adotou-se a correlação de Sprearman para analisar o grau de dependência das variáveis.
 
+`Figura: Porosidade x Permeabilidade e por tipo e tamanho de poro`
 ![Scatter plot: Phix K](figures/XPLOT_Phi_x_K.png)
 
-`Figura: Porosidade x Permeabilidade e por tipo e tamanho de poro`
-
-
 **Agrupamento de Fácies Petrofísicas**
+
 Para a modelagem de fáceis petrofísicas (Petrophysical Rock Type, PRT) por agrupamento foram selecionados variáveis categóricas de “tipo de poro” e “tamanho de poro” e variáveis numéricas  “porosidade” (Phi, fraction), “massa específica de grão (GrainDensity, g/cc)” e “permeabilidade” (Kabs, mD). Essas variáveis são utilizadas historicamente na modelagem de fácies petrofísicas por métodos convencionais (Lucia e Amaefule 1993). Na figura XX mostra um gráfico de dispersão relacionando porosidade (no X) com a permeabilidade (no Y) e usando como rótulos o tipo de poro e a média do tamanho de poro como tamanho do símbolo do rótulo. Nota-se a relação não-linear forte entre porosidade e permeabilidade
 
 
 **Classificação de fácies geológicas**
+
 Para a classificação de fácies sedimentares (litofácies), foram selecionados às variáveis categóricas relacionados a litologia e mineralogia, tais como  “litologia”, “tamanho de grão”, “seleção de grão”, “tipo de cimento”,  e numéricas da análise geoquímica  “teor de minerais siliciclásticos, QFM”, “Teor de calcita” e "teor de dolomita”.  Foi inserido o grupo de “PRT KHierarquico” definido na etapa anterior 
 
-#### 2.4 Inferências
+#### 2.3 Inferências
 
-**Pré-processamento**
-O pré-processamento foi o mesmo adotado para os modelos de agrupamento.
+(inserir texto)
+
+**2.3.1. Modelagem dos grupos de Fácies Petrofísica (Petrophysical Rock Type, PRT)**
+
+***Pré-processamento***
 
 Desse modo adotou-se um fluxo de pré-processamento dos dados separando em dados categóricos, numéricos lineares e numéricos não-linear conforme o fluxo da figura abaixo.
 
 ![Fluxo de pré-processamento (_Pipeline_)](figures/PreProccesPipeline.png)
 
-Foi realizado uma separação entre dado de treino (70% dos dados) e teste;
-
-Devido a número muito baixo de amostras, adotou-se uma associação de microfácies com base na descrição detalhada de Bagni (2021) e foi necessário adotar um balanceamento através do algoritmo de naive random over-sampling
-
-![Balanceamento (Data augmentation) com o Random Over Sampler](figures/Balanceamento.png)
-
-
-
-**Modelagem dos grupos de Fácies Petrofísica (Petrophysical Rock Type, PRT)**
+***Modelagem***
 
 Testou-se dois tipos de algoritmo de agrupamento (clustering):
 
@@ -122,9 +118,19 @@ Um modelo foi gerado com o algoritmo de agrupamento hierárquico aglomerativo po
 Foi utilizado o corte de distância (distance_threshold) = 10
 
 
-**Abordagem para classificação de fácies**
+**2.3.2. Abordagem para classificação de fácies**
 
+***Pré-processamento***
 
+O pré-processamento foi o mesmo adotado para os modelos de agrupamento.
+
+Foi realizado uma separação entre dado de treino (70% dos dados) e teste;
+
+Devido a número muito baixo de amostras, adotou-se uma associação de microfácies com base na descrição detalhada de Bagni (2021) e foi necessário adotar um balanceamento através do algoritmo de naive random over-sampling
+
+![Balanceamento (Data augmentation) com o Random Over Sampler](figures/Balanceamento.png)
+
+***Modelagem***
 
 Seleção de modelo por busca de melhores hiper-parâmetros para os algoritmos de Decision Tree e Random Forest
 
