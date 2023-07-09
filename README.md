@@ -107,11 +107,12 @@ A especificação do número ideal de grupos para aplicação no algoritmo de K-
    
 A figura XX mostra os gráficos gerados e a identificação de número otimizado de grupos sendo 6 de modo a melhor atender os critérios. 
 
-`Figura: Busca de melhor número de grupos para aplicação no algoritmo de Kmeans`
+`Figura: Busca de melhor número de grupos para aplicação no algoritmo de K-médias`
 ![Melhor numero de grupos com Kmeans](figures/Best_Cluster_Number.png)
 
+`Quadro: Hiper-parâmetros dos modelos do modelo de agrupamento Kmeans`
 
-Hiper-parâmetro | Modelo Kmeans
+Hiper-parâmetro | Modelo K-médias
 ---------- | ----------
 N_clusters| 6
 N_init  | 50
@@ -120,9 +121,12 @@ Max_iter | 500
 
 Foi gerado outro *modelo com o algoritmo de agrupamento hierárquico aglomerativo* por ser mais flexível que o agrupamento de K-média e acomodar variáveis não numéricas e ser mais sensível na descoberta de grupos anormais (ou outliers) (Bruce & Bruce 2019).
 
+`Quadro: Hiper-parâmetros dos modelos do modelo de agrupamento hierárquico aglomerativo`
+
 Hiper-parâmetro | Modelo Hierarquico Aglomerativo
 ---------- | ----------
 corte de distância (distance_threshold)| 10
+
 
 **2.3.2. Abordagem para classificação de fácies**
 
@@ -132,13 +136,16 @@ O pré-processamento foi o mesmo adotado para os modelos de agrupamento.
 
 Foi realizado uma separação entre dado de treino (70% dos dados) e teste;
 
-Devido a número muito baixo de amostras, adotou-se uma associação de microfácies com base na descrição detalhada de Bagni (2021) e foi necessário adotar um balanceamento através do algoritmo de naive random over-sampling
+Devido a número muito baixo de amostras, adotou-se uma associação de microfácies com base na descrição detalhada de Bagni (2021) e foi necessário adotar um balanceamento através do algoritmo de naive random over-sampling.
 
+`Figura: Balanceamento das amostras para classificação`
 ![Balanceamento (Data augmentation) com o Random Over Sampler](figures/Balanceamento.png)
 
 ***Modelagem***
 
 Seleção de modelo por busca de melhores hiper-parâmetros para os algoritmos de Decision Tree e Random Forest
+
+`Quadro: Hiper-parâmetros dos modelos de classificação`
 
 Hiper-parâmetro   |  Decision Tree | Random Forest
 --------          | -----------    | ------
@@ -152,6 +159,8 @@ N_estimators      |                | 100
 
 #### 3.1. Performance dos modelos de agrupamento
 
+`Quadro: Métricas dos modelos de agrupamento`
+
 Métrica            | Agrupamento Kmeans | Hierárquico Aglomerativo
 --------           | -------------      | ---------------
 Rand Index         | 0,676              | 0,689
@@ -161,15 +170,21 @@ V Measure Score    | 0,231              | 0,252
 
 Esses parâmetros não são muitos diferentes e não ajudam muito a avaliação, portanto foi adotado a comparação de boxplots com as prpriedaes...
 
+`Figura: Boxplot de propriedades petrofísicas por grupos gerados pelo modelo Kmeans`
 ![BOXPLOT Kmeans](figures/BOXPLOT_grupos_kmeas.png)
 
+`Figura: Boxplot de propriedades petrofísicas por grupos gerados pelo modelo Hierarquico Aglomerativo`
 ![BOXPLOT Kmeans](figures/BOXPLOT_grupos_hierarquico.png)
 
+`Figura: Dendograma dos grupos gerados pelo modelo Hierarquico Aglomerativo`
 ![Dendogram do modelo Hierárquico Aglomerativo](figures/Khierarchical_Dendogram.png)
 
+`Figura: Gráfico Phi x K por grupos gerados pelo  modelo Hierarquico Aglomerativo`
 ![XPLOT Phi x K por grupo hierarquico](figures/XPLOT_grupos_hierarquico.png)
 
 #### 3.2. Performance dos modelos de classificação
+
+`Quadro: Métricas dos modelos de classificação`
 
 Métrica            | Decision Tree | Random Forest
 -----------        | ------------  | ------------
@@ -178,10 +193,16 @@ Acurácia Ponderada | 0,745         | 0,895
 Kappa              | 0,569         | 0,811
 F1                 | 0,718         | 0,888
 
+`Figura: Matriz de confusão do modelo Decision Tree`
+
 ![Decision Tree: matrix de confusão](figures/CONFUSION_MATRIZ_Decision_Tree.png)
-![Decision Tree: features selection](figures/FEATURES_SELECTION_decision_tree.png)
+
+`Figura: Matriz de confusão do modelo Random Forest`
 
 ![Random Forest: matrix de confusão](figures/CONFUSION_MATRIZ_Random_Forest.png)
+
+`Figura: Atributos com maiores impactos no modelo Random Forest`
+
 ![Random Forest: features selection](figures/FEATURES_SELECTION_random_forest.png)
 
 
