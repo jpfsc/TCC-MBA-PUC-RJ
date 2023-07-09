@@ -34,7 +34,7 @@ A modelagem consiste de 3 etapas descritas a seguir:
 
 Foi utilizado principalmente a biblioteca SciKit-Learn (Pedregosa et al, 2011), versão 1.2.2.
 
-#### 2.1 Condicionamento da base de dados
+#### 2.1. Condicionamento da base de dados
 
 Para esse trabalho utilizou-se de descrição petrográfica de rochas carbonáticas e análises laboratoriais de geoquímica e petrofísica básica realizadas em 157 amostras de rocha carbonática carstificada e publicadas em Bagni (2021).
 
@@ -62,23 +62,23 @@ Descrição da base de dados utilizados:
 
 Foi aplicado a modelagem petrofísica conforme realizado em Bagni _et al_ (2022) para obtenção de propriedades relacionados a fácies petrofísicas com o método proposto por Amaefule _et al_ (1993).
 
-#### 2.2 Análise Exploratória e Seleção de atributos
+#### 2.2. Análise Exploratória e Seleção de atributos
 
 A análise exploratória dos dados mostra uma relação não linear da porosidade com a permeabilidade e FZI por isso adotou-se a correlação de Sprearman para analisar o grau de dependência das variáveis.
+Na figura XX mostra um gráfico de dispersão relacionando porosidade (no X) com a permeabilidade (no Y) e usando como rótulos o tipo de poro e a média do tamanho de poro como tamanho do símbolo do rótulo. Nota-se a relação não-linear forte entre porosidade e permeabilidade
 
 `Figura: Porosidade x Permeabilidade e por tipo e tamanho de poro`
 ![Scatter plot: Phix K](figures/XPLOT_Phi_x_K.png)
 
 **Agrupamento de Fácies Petrofísicas**
 
-Para a modelagem de fáceis petrofísicas (Petrophysical Rock Type, PRT) por agrupamento foram selecionados variáveis categóricas de “tipo de poro” e “tamanho de poro” e variáveis numéricas  “porosidade” (Phi, fraction), “massa específica de grão (GrainDensity, g/cc)” e “permeabilidade” (Kabs, mD). Essas variáveis são utilizadas historicamente na modelagem de fácies petrofísicas por métodos convencionais (Lucia e Amaefule 1993). Na figura XX mostra um gráfico de dispersão relacionando porosidade (no X) com a permeabilidade (no Y) e usando como rótulos o tipo de poro e a média do tamanho de poro como tamanho do símbolo do rótulo. Nota-se a relação não-linear forte entre porosidade e permeabilidade
-
+Para a modelagem de fáceis petrofísicas (Petrophysical Rock Type, PRT) por agrupamento foram selecionados variáveis categóricas de “tipo de poro” e “tamanho de poro” e variáveis numéricas  “porosidade” (Phi, fraction), “massa específica de grão (GrainDensity, g/cc)” e “permeabilidade” (Kabs, mD). Essas variáveis são utilizadas historicamente na modelagem de fácies petrofísicas por métodos convencionais (Lucia e Amaefule 1993). 
 
 **Classificação de fácies geológicas**
 
 Para a classificação de fácies sedimentares (litofácies), foram selecionados às variáveis categóricas relacionados a litologia e mineralogia, tais como  “litologia”, “tamanho de grão”, “seleção de grão”, “tipo de cimento”,  e numéricas da análise geoquímica  “teor de minerais siliciclásticos, QFM”, “Teor de calcita” e "teor de dolomita”.  Foi inserido o grupo de “PRT KHierarquico” definido na etapa anterior 
 
-#### 2.3 Inferências
+#### 2.3. Inferências
 
 (inserir texto)
 
@@ -87,6 +87,8 @@ Para a classificação de fácies sedimentares (litofácies), foram selecionados
 ***Pré-processamento***
 
 Desse modo adotou-se um fluxo de pré-processamento dos dados separando em dados categóricos, numéricos lineares e numéricos não-linear conforme o fluxo da figura abaixo.
+
+`Figura: Fluxo de pré-processamento`
 
 ![Fluxo de pré-processamento (_Pipeline_)](figures/PreProccesPipeline.png)
 
@@ -105,7 +107,9 @@ A especificação do número ideal de grupos para aplicação no algoritmo de K-
    
 A figura XX mostra os gráficos gerados e a identificação de número otimizado de grupos sendo 6 de modo a melhor atender os critérios. 
 
+`Figura: Busca de melhor número de grupos para aplicação no algoritmo de Kmeans`
 ![Melhor numero de grupos com Kmeans](figures/Best_Cluster_Number.png)
+
 
 Hiper-parâmetro | Modelo Kmeans
 ---------- | ----------
@@ -114,9 +118,11 @@ N_init  | 50
 Random_state | 1
 Max_iter | 500
 
-Um modelo foi gerado com o algoritmo de agrupamento hierárquico aglomerativo por ser mais flexível que o agrupamento de K-média e acomodar variáveis não numéricas e ser mais sensível na descoberta de grupos anormais (ou outliers) (Bruce & Bruce 2019). 
-Foi utilizado o corte de distância (distance_threshold) = 10
+Foi gerado outro *modelo com o algoritmo de agrupamento hierárquico aglomerativo* por ser mais flexível que o agrupamento de K-média e acomodar variáveis não numéricas e ser mais sensível na descoberta de grupos anormais (ou outliers) (Bruce & Bruce 2019).
 
+Hiper-parâmetro | Modelo Hierarquico Aglomerativo
+---------- | ----------
+corte de distância (distance_threshold)| 10
 
 **2.3.2. Abordagem para classificação de fácies**
 
@@ -144,7 +150,7 @@ N_estimators      |                | 100
 
 ### 3. Resultados
 
-Análise de performance dos modelos de agrupamento: 
+#### 3.1. Performance dos modelos de agrupamento
 
 Métrica            | Agrupamento Kmeans | Hierárquico Aglomerativo
 --------           | -------------      | ---------------
@@ -163,7 +169,7 @@ Esses parâmetros não são muitos diferentes e não ajudam muito a avaliação,
 
 ![XPLOT Phi x K por grupo hierarquico](figures/XPLOT_grupos_hierarquico.png)
 
-**Análise de performance dos modelos de classificação**
+#### 3.2. Performance dos modelos de classificação
 
 Métrica            | Decision Tree | Random Forest
 -----------        | ------------  | ------------
