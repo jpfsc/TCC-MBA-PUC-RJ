@@ -152,9 +152,7 @@ Devido a número muito baixo de amostras, adotou-se uma associação de microfá
 
 ***Modelagem***
  
- de Decision Tree e Random Forest
-
-Aplicou-se a função _GridSearchCV_ da biblioteca _Scikit-learn_ para realizar uma busca dos melhores hiper-parâmetros para aplicação em cada  algoritimo de classificação. O quadro 03 resume os hiper-parâmetros selecionados por modelo.
+Criou-se dois modelos baseados em algoritmos diferentes, (1) Modelo com Decision Tree e (2) Modelo com Random Forest. A função _GridSearchCV_ da biblioteca _Scikit-learn_ foi aplicada para realizar uma busca dos melhores hiper-parâmetros para aplicação em cada um dos modelos de classificação. O quadro 03 resume os hiper-parâmetros selecionados por modelo.
 
 `Quadro 03: Hiper-parâmetros dos modelos de classificação`
 
