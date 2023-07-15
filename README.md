@@ -16,7 +16,7 @@ Trabalho apresentado ao curso [BI MASTER](https://ica.puc-rio.ai/bi-master) como
 
 ### Resumo
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar nisl vestibulum tortor fringilla, eget imperdiet neque condimentum. Proin vitae augue in nulla vehicula porttitor sit amet quis sapien. Nam rutrum mollis ligula, et semper justo maximus accumsan. Integer scelerisque egestas arcu, ac laoreet odio aliquet at. Sed sed bibendum dolor. Vestibulum commodo sodales erat, ut placerat nulla vulputate eu. In hac habitasse platea dictumst. Cras interdum bibendum sapien a vehicula.
+(em elaboração)
 
 ### 1. Introdução
 
@@ -142,20 +142,20 @@ corte de distância (distance_threshold)| 10
 
 ***Pré-processamento***
 
-O pré-processamento foi o mesmo adotado para os modelos de agrupamento.
+O pré-processamento foi o mesmo adotado para os modelos de agrupamento. Sendo que ocorreu a entre dado de treino (70% dos dados) e teste (30% dos dados).
 
-Foi realizado uma separação entre dado de treino (70% dos dados) e teste;
+Devido a número muito baixo de amostras, adotou-se uma associação de microfácies com base na descrição detalhada de Bagni (2021) e foi necessário adotar um balanceamento através do algoritmo de naive random over-sampling; a figura 04 mostra os estado inicial do número de amostras nos dados de treino e o resultado após balanceamento.
 
-Devido a número muito baixo de amostras, adotou-se uma associação de microfácies com base na descrição detalhada de Bagni (2021) e foi necessário adotar um balanceamento através do algoritmo de naive random over-sampling.
-
-`Figura: Balanceamento das amostras para classificação`
+`Figura 04: Balanceamento das amostras para classificação`
 ![Balanceamento (Data augmentation) com o Random Over Sampler](figures/Balanceamento.png)
 
 ***Modelagem***
+ 
+ de Decision Tree e Random Forest
 
-Seleção de modelo por busca de melhores hiper-parâmetros para os algoritmos de Decision Tree e Random Forest
+Aplicou-se a função _GridSearchCV_ da biblioteca _Scikit-learn_ para realizar uma busca dos melhores hiper-parâmetros para aplicação em cada  algoritimo de classificação. O quadro 03 resume os hiper-parâmetros selecionados por modelo.
 
-`Quadro: Hiper-parâmetros dos modelos de classificação`
+`Quadro 03: Hiper-parâmetros dos modelos de classificação`
 
 Hiper-parâmetro   |  Decision Tree | Random Forest
 --------          | -----------    | ------
@@ -169,7 +169,9 @@ N_estimators      |                | 100
 
 #### 3.1. Performance dos modelos de agrupamento
 
-`Quadro: Métricas dos modelos de agrupamento`
+O quadro 04 apresenta as métricas de performance de cada modelo de agrupamento em comparação com a descrição de classes de rocha definidos pelo conceitual do especialista em geologia. Nota-se que os valores são bem semelhantes.
+
+`Quadro 04: Métricas dos modelos de agrupamento`
 
 Métrica            | Agrupamento Kmeans | Hierárquico Aglomerativo
 --------           | -------------      | ---------------
@@ -178,23 +180,23 @@ Homogeneity Score  | 0,242              | 0,328
 Completeness Score | 0,221              | 0,205
 V Measure Score    | 0,231              | 0,252
 
-Esses parâmetros não são muitos diferentes e não ajudam muito a avaliação, portanto foi adotado a comparação de boxplots com as prpriedaes...
+Esses parâmetros não são muitos diferentes e não ajudam muito a avaliação, portanto foi adotado a comparação de boxplots com as propriedaes...
 
-`Figura: Boxplot de propriedades petrofísicas por grupos gerados pelo modelo Kmeans`
+`Figura 05: Boxplot de propriedades petrofísicas por grupos gerados pelo modelo Kmeans`
 ![BOXPLOT Kmeans](figures/BOXPLOT_grupos_kmeas.png)
 
-`Figura: Boxplot de propriedades petrofísicas por grupos gerados pelo modelo Hierarquico Aglomerativo`
+`Figura 06: Boxplot de propriedades petrofísicas por grupos gerados pelo modelo Hierarquico Aglomerativo`
 ![BOXPLOT Kmeans](figures/BOXPLOT_grupos_hierarquico.png)
 
-`Figura: Dendograma dos grupos gerados pelo modelo Hierarquico Aglomerativo`
+`Figura 07: Dendograma dos grupos gerados pelo modelo Hierarquico Aglomerativo`
 ![Dendogram do modelo Hierárquico Aglomerativo](figures/Khierarchical_Dendogram.png)
 
-`Figura: Gráfico Phi x K por grupos gerados pelo  modelo Hierarquico Aglomerativo`
+`Figura 08: Gráfico Phi x K por grupos gerados pelo  modelo Hierarquico Aglomerativo`
 ![XPLOT Phi x K por grupo hierarquico](figures/XPLOT_grupos_hierarquico.png)
 
 #### 3.2. Performance dos modelos de classificação
 
-`Quadro: Métricas dos modelos de classificação`
+`Quadro 05: Métricas dos modelos de classificação`
 
 Métrica            | Decision Tree | Random Forest
 -----------        | ------------  | ------------
@@ -203,15 +205,15 @@ Acurácia Ponderada | 0,745         | 0,895
 Kappa              | 0,569         | 0,811
 F1                 | 0,718         | 0,888
 
-`Figura: Matriz de confusão do modelo Decision Tree`
+`Figura 09: Matriz de confusão do modelo Decision Tree`
 
 ![Decision Tree: matrix de confusão](figures/CONFUSION_MATRIZ_Decision_Tree.png)
 
-`Figura: Matriz de confusão do modelo Random Forest`
+`Figura 10: Matriz de confusão do modelo Random Forest`
 
 ![Random Forest: matrix de confusão](figures/CONFUSION_MATRIZ_Random_Forest.png)
 
-`Figura: Atributos com maiores impactos no modelo Random Forest`
+`Figura 11: Atributos com maiores impactos no modelo Random Forest`
 
 ![Random Forest: features selection](figures/FEATURES_SELECTION_random_forest.png)
 
