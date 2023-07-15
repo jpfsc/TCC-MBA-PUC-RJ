@@ -200,6 +200,8 @@ A figura 08 apresenta o dendograma do modelo hierárquico aglomerativo e as dist
 
 #### 3.2. Performance dos modelos de classificação
 
+O quadro 05 apresenta as métricas de performance dos modelos de classificação. O modelo Random Forest apresenta as melhores métricas de performance
+
 `Quadro 05: Métricas dos modelos de classificação`
 
 Métrica            | Decision Tree | Random Forest
@@ -209,17 +211,24 @@ Acurácia Ponderada | 0,429         | 0,750
 Kappa              | 0,417         | 0,662
 F1                 | 0,512         | 0,693
 
-`Figura 09: Matriz de confusão do modelo Decision Tree`
+
+`Figura 09: Atributos com maiores impactos no modelo Random Forest`
+
+![Random Forest: features selection](figures/FEATURES_SELECTION_random_forest.png)
+
+
+As figuras 10 e 11 apresentam as Matriz de Confusão de cada modelo
+
+`Figura 10: Matriz de confusão do modelo Decision Tree`
 
 ![Decision Tree: matrix de confusão](figures/CONFUSION_MATRIZ_Decision_Tree.png)
 
-`Figura 10: Matriz de confusão do modelo Random Forest`
+`Figura 11: Matriz de confusão do modelo Random Forest`
 
 ![Random Forest: matrix de confusão](figures/CONFUSION_MATRIZ_Random_Forest.png)
 
-`Figura 11: Atributos com maiores impactos no modelo Random Forest`
+Os atributos de maior impacto no modelo Decision Treen são: GrainSize / Crystallinity, Lithology, Calcite+, QFM+; enquanto no modelo Random Forest são: Lithology, Calcite+, Dolomite+, GrainSize / Crystallinity. Atributos como Cement 1st e Sorting em ambos os casos fornecem mais erros na classificação. 
 
-![Random Forest: features selection](figures/FEATURES_SELECTION_random_forest.png)
 
 
 
