@@ -81,7 +81,7 @@ Para a modelagem de fáceis petrofísicas (_Petrophysical Rock Type_, PRT) por a
 
 **Classificação de fácies geológicas**
 
-Para a classificação de fácies sedimentares (litofácies), foram selecionados às variáveis categóricas relacionados a litologia e mineralogia, tais como  “litologia”, “tamanho de grão”, “seleção de grão”, “tipo de cimento”,  e numéricas da análise geoquímica  “teor de minerais siliciclásticos, QFM”, “Teor de calcita” e "teor de dolomita”.  Foi inserido o grupo de “PRT KHierarquico” definido na etapa anterior 
+Para a classificação de fácies sedimentares (litofácies), foram selecionados às variáveis categóricas relacionados a litologia e mineralogia, tais como  “litologia” (lithology), “tamanho de grão” (GrainSize / Crystallinity), “seleção de grão” (Sorting), “tipo de cimento” (Cement 1st), e numéricas da análise geoquímica  “teor de minerais siliciclásticos" (QFM+), “Teor de calcita” (Calcite+) e "teor de dolomita” (Dolomite+).  Foi inserido o grupo de “PRT KHierarquico” definido na etapa anterior com a proposta de relacionar as classes litológicas com as fácies petrofísicas.
 
 #### 2.3. Inferências
 
