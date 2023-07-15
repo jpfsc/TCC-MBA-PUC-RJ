@@ -38,7 +38,7 @@ Foi utilizado principalmente a biblioteca SciKit-Learn (Pedregosa et al, 2011), 
 
 Para esse trabalho utilizou-se de descrição petrográfica de rochas carbonáticas e análises laboratoriais de geoquímica e petrofísica básica realizadas em 157 amostras de rocha carbonática carstificada e publicadas em Bagni (2021).
 
-A fase de extração, transformação e carga (_Extract, Transformation, Load_, ETL) consiste na leitura dos arquivos csv (disponibilizado na pasta _dataset_ [link](...) ), limpeza dos dados, remoção de valores nulos, filtragem, conversão de unidades, e padronização de valores categórico.
+A fase de extração, transformação e carga (_Extract, Transformation, Load_, ETL) consiste na leitura dos arquivos csv (disponibilizado na pasta _dataset_ [link](https://github.com/jpfsc/TCC-MBA-PUC-RJ/tree/15643d0f50386f235cc8343ceeb1e7bc9059f03a/dataset), limpeza dos dados, remoção de valores nulos, filtragem, conversão de unidades, e padronização de valores categórico.
 
 Segue a lista dos atributos selecionados e a sua descrição:
 
