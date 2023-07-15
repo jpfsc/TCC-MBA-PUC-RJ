@@ -161,8 +161,8 @@ Hiper-parâmetro   |  Decision Tree | Random Forest
 --------          | -----------    | ------
 Critério          | gini           |  gini
 Max_depth         | 12             |  8
-Min_samples_leaf  | 1              | 1
-N_estimators      |                | 100
+Min_samples_leaf  | 1              |  1
+N_estimators      |                |  50
 
 
 ### 3. Resultados
@@ -200,10 +200,10 @@ Como as métricas de perfomance não ajudam na avaliação dos grupos, foi adota
 
 Métrica            | Decision Tree | Random Forest
 -----------        | ------------  | ------------
-Acurácia           | 0,681         | 0,872
-Acurácia Ponderada | 0,745         | 0,895
-Kappa              | 0,569         | 0,811
-F1                 | 0,718         | 0,888
+Acurácia           | 0,277         | 0,745
+Acurácia Ponderada | 0,404         | 0,628
+Kappa              | 0,200         | 0,593
+F1                 | 0,259         | 0,670
 
 `Figura 09: Matriz de confusão do modelo Decision Tree`
 
@@ -221,16 +221,12 @@ F1                 | 0,718         | 0,888
 
 ### 4. Conclusões
 
-A adoção do modelo de agrupamento hierárquico aglomerativa com a integração de dados de tipo de poro e tamanho do poro (obtidos na descrição petrográfica) e dos dados de porosidade, permeabilidade e massa específica do grão (oriundo da análise petrofísica) colaborou para uma melhor definição de grupos de rocha com características permo-porosas semelhantes. 
+A adoção do modelo de agrupamento hierárquico aglomerativa com a integração de dados de tipo de poro e tamanho do poro (obtidos na descrição petrográfica) e dos dados de porosidade, permeabilidade e massa específica do grão (oriundo da análise petrofísica) colaborou para uma melhor definição de grupos de rocha com características permo-porosas semelhantes. Vantagens dessa abordagem é poder utilizar dados categóricos e dados laboratoriais para a definição de petrophysical rock type. 
 
 A classificação de fácies com o método com Random Forest mostrou-se viável e ágil
 O modelo com Random Forest demonstrou os melhores resultados e a aplicação é viável para propagação das fácies em amostras não classificadas e sem o viés da subjetividade de diferentes geólogos intérpretes.
 
-Esse método tem potencial em aplicação em dados históricos dados históricos visto ser necessário apenas às descrições petrográficas e mineralógicas (e/ou geoquímicas) comumente armazenadas em forma tabular ou textual, não sendo necessário revisitar imagens 2D de lâminas petrográficas.
-
-Vantagens dessa abordagem é poder utilizar dados categóricos e dados laboratoriais para a definição de petrophysical rock type. 
-
-Esses dados também podem ser obtidos de análise de imagem 2D de lâminas petrográficas e volumes (3D) de micro-tomografia, sendo necessário apenas que os dados sejam discretizados em forma de tabelas (arrays).
+Esse método tem potencial em aplicação em dados históricos dados históricos visto ser necessário apenas às descrições petrográficas e mineralógicas (e/ou geoquímicas) comumente armazenadas em forma tabular ou textual, não sendo necessário revisitar imagens 2D de lâminas petrográficas. Esses dados também podem ser obtidos de análise de imagem 2D de lâminas petrográficas e volumes (3D) de micro-tomografia, sendo necessário apenas que os dados sejam discretizados em forma de tabelas (arrays).
 
 
 ### _Referências Bibliográficas_
