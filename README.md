@@ -38,7 +38,7 @@ Foi utilizado principalmente a biblioteca SciKit-Learn (Pedregosa et al, 2011), 
 
 Para esse trabalho utilizou-se de descrição petrográfica de rochas carbonáticas e análises laboratoriais de geoquímica e petrofísica básica realizadas em 157 amostras de rocha carbonática carstificada e publicadas em Bagni (2021).
 
-A fase de extração, transformação e carga (_Extract, Transformation, Load_, ETL) consiste na leitura dos arquivos csv (disponibilizado na pasta _dataset_ [link](https://github.com/jpfsc/TCC-MBA-PUC-RJ/tree/15643d0f50386f235cc8343ceeb1e7bc9059f03a/dataset), limpeza dos dados, remoção de valores nulos, filtragem, conversão de unidades, e padronização de valores categórico.
+A fase de extração, transformação e carga (_Extract, Transformation, Load_ - ETL) consiste na leitura dos arquivos csv (disponibilizado na pasta _dataset_ [link](https://github.com/jpfsc/TCC-MBA-PUC-RJ/tree/15643d0f50386f235cc8343ceeb1e7bc9059f03a/dataset), limpeza dos dados, remoção de valores nulos, filtragem, conversão de unidades, e padronização de valores categórico.
 
 Segue a lista dos atributos selecionados e a sua descrição:
 
@@ -55,6 +55,7 @@ Segue a lista dos atributos selecionados e a sua descrição:
 * _Depositional System_: categórico, classificação do sistema deposicional
 * _Main Diagenetic Environment_: categórico, classificação do ambiente diagenético
 * _Microfacies_: categórico, classificação de microfácies
+* _Facies_: categórico, associação de microfácies
 * _Calcite+_: numérico, teor de mineral calcite proveniente da análise geoquímica
 * _Dolomite+_: numérico, teor de mineral dolomita proveniente da análise geoquímica
 * _QFM+_: numérico, teor de minerais quartzo-feldspato-mica proveniente da análise geoquímica
@@ -85,13 +86,13 @@ Para a classificação de fácies sedimentares (litofácies), foram selecionados
 
 #### 2.3. Inferências
 
-A inferência consistiu na geração de um modelo de agrupamento de fácies petrofísicas e outro de classificação de fácies geológicas. Cada modelo tem uma característica específica de atributos selecionados, pré-processamento e algoritmo aplicado.
+A inferência consistiu na geração de um modelo de agrupamento de fácies petrofísicas e outro de classificação de fácies geológicas. Cada modelo tem uma característica específica de atributos selecionados, pré-processamento e algoritmo aplicado. Esta etapa é ciclica e foram realizados vários experimentos até atingir a melhor performance.
 
 **2.3.1. Modelagem dos Grupos de Fácies Petrofísica (Petrophysical Rock Type, PRT)**
 
 ***Pré-processamento***
 
-Desse modo adotou-se um fluxo de pré-processamento dos dados separando em dados categóricos, numéricos lineares e numéricos não-linear conforme o fluxo da figura 02.
+A partir das características dos atributos selecionados, adotou-se um fluxo de pré-processamento dos dados separando em dados categóricos, numéricos lineares e numéricos não-linear conforme o fluxo da figura 02.
 
 `Figura 02: Fluxo de pré-processamento`
 
@@ -120,11 +121,11 @@ Com base na análise do melhor número de grupos, constuiu-se o modelo de k-méd
 `Quadro 01: Hiper-parâmetros dos modelos do modelo de agrupamento K-médias`
 
 Hiper-parâmetro | Modelo K-médias
----------- | ----------
-N_clusters| 6
-N_init  | 50
-Random_state | 1
-Max_iter | 500
+----------      | ----------
+N_clusters      | 6
+N_init          | 50
+Random_state    | 1
+Max_iter        | 500
 
 
 Obtou-se em gerar um **modelo com o algoritmo de agrupamento hierárquico aglomerativo** por ser mais flexível que o agrupamento de K-média e acomodar variáveis não numéricas e ser mais sensível na descoberta de grupos anormais (ou outliers) (Bruce & Bruce 2019).
@@ -133,18 +134,18 @@ O único hiper-parâmetros ajustado foi o corte de distância dos grupos (_dista
 
 `Quadro 02: Hiper-parâmetros dos modelos do modelo de agrupamento hierárquico aglomerativo`
 
-Hiper-parâmetro | Modelo Hierarquico Aglomerativo
----------- | ----------
-corte de distância (distance_threshold)| 10
+Hiper-parâmetro                         | Modelo Hierarquico Aglomerativo
+----------                              | ----------
+corte de distância (distance_threshold) | 10
 
 
 **2.3.2. Abordagem para classificação de fácies**
 
 ***Pré-processamento***
 
-O pré-processamento foi o mesmo adotado para os modelos de agrupamento. Sendo que ocorreu a entre dado de treino (70% dos dados) e teste (30% dos dados).
+O pré-processamento foi o mesmo adotado para os modelos de agrupamento. Sendo que ocorreu a separação entre dado de treino (70% dos dados) e teste (30% dos dados) de modo estratificado.
 
-Devido a número muito baixo de amostras, adotou-se uma associação de microfácies com base na descrição detalhada de Bagni (2021) e foi necessário adotar um balanceamento através do algoritmo de naive random over-sampling; a figura 04 mostra os estado inicial do número de amostras nos dados de treino e o resultado após balanceamento.
+Devido a número muito baixo de amostras, adotou-se uma associação de microfácies (Facies) com base na descrição detalhada de Bagni (2021) e foi necessário adotar um balanceamento através do algoritmo de naive random over-sampling; a figura 04 mostra os estado inicial do número de amostras nos dados de treino e o resultado após balanceamento.
 
 `Figura 04: Balanceamento das amostras para classificação`
 ![Balanceamento (Data augmentation) com o Random Over Sampler](figures/Balanceamento.png)
@@ -238,8 +239,6 @@ Amaefule, J.O., Altunbay, M., Tiab, D., Kersey, D.G., Keelan, D. 1993. Enhanced 
 Bruce, P., Bruce, A. 2019. Estatística prática para cientistas de dados: 50 conceitos essenciais, tradução Luciana Ferraz. Rio de Janeiro: Alta Books. 320p.
 
 Cuddy, S. 2021. The benefits and dangers of using artificial intelligences in petrophysics. Artificial Intelligence in Geoscienses (2): 1-10.
-
-Evsukoff, A.G. 2020. Inteligência computacional: fundamentos e aplicações [[recurso eletrônico](http://www.e-papers.com.br/produtos.asp?codigo_produto=3168)]. 1ed. Rio de Janeiro: e-papers 
 
 Lucia, F.J. 1995. Rock-fabric/petrophysical classification of carbonate pore space for reservoir characterization. AAPG Bull. (79): 1275-1300.
 
