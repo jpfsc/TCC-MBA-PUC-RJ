@@ -40,9 +40,9 @@ Para esse trabalho utilizou-se de descrição petrográfica de rochas carbonáti
 
 A fase de extração, transformação e carga (ETL) consiste na leitura dos arquivos csv (disponibilizado na pasta _dataset_ [link](...) ), limpeza dos dados, remoção de valores nulos, filtragem, conversão de unidades, e padronização de valores categórico.
 
-Segue a lista dos parâmetros selecionados e a sua descrição:
+Segue a lista dos atributos selecionados e a sua descrição:
 
-**Parâmetros utilizados:**
+**Atributos utilizados:**
 * _Sample_: categórico, código da amostra
 * _Lithology_: categórico, litologia 
 * _Grain Size / Crystallinity_: categórico, tamanho de grão/cristal
@@ -70,22 +70,22 @@ Foi aplicado a modelagem petrofísica conforme realizado em Bagni _et al_ (2022)
 
 A análise exploratória dos dados mostra uma relação não linear da porosidade com a permeabilidade e FZI por isso adotou-se a correlação de Spearman (rs) para analisar o grau de dependência das variáveis.
 
-A figura 01 mostra um gráfico de dispersão relacionando porosidade (no X) com a permeabilidade (no Y) e usando como rótulos o tipo de poro e a média do tamanho de poro como tamanho do símbolo do rótulo. Nota-se a relação não-linear forte entre porosidade e permeabilidade (rs = 0,74).
+A figura 01 mostra um gráfico de dispersão relacionando os atributos de porosidade (no X) e permeabilidade (no Y), tendo como rótulos os atributos o tipo de poro e a média do tamanho de poro como tamanho do símbolo do rótulo. Nota-se a relação não-linear forte entre porosidade e permeabilidade (rs = 0,74).
 
 `Figura 01: Porosidade x Permeabilidade e por tipo e tamanho de poro`
 ![Scatter plot: Phix K](figures/XPLOT_Phi_x_K.png)
 
 **Agrupamento de Fácies Petrofísicas**
 
-Para a modelagem de fáceis petrofísicas (_Petrophysical Rock Type_, PRT) por agrupamento foram selecionados variáveis categóricas de “tipo de poro” (_Pore type 1st_) e “tamanho de poro” (Pore Size) e variáveis numéricas  “porosidade” (Phi, fraction), “massa específica de grão (GrainDensity, g/cc)” e “permeabilidade” (Kabs(mD)). Essas variáveis são as mais utilizadas nos métodos convencionais  (Amaefule, 1993 e Lucia, 1995). 
+Para a modelagem de fáceis petrofísicas (_Petrophysical Rock Type_, PRT) por agrupamento foram selecionados atributos categóricas de “tipo de poro” (_Pore type 1st_) e “tamanho de poro” (Pore Size) e atributos numéricos  “porosidade” (Phi, fraction), “massa específica de grão (GrainDensity, g/cc)” e “permeabilidade” (Kabs(mD)). Esses atributos são as mais utilizadas nos métodos convencionais  (Amaefule, 1993 e Lucia, 1995). 
 
 **Classificação de fácies geológicas**
 
-Para a classificação de fácies sedimentares (litofácies), foram selecionados às variáveis categóricas relacionados a litologia e mineralogia, tais como  “litologia” (lithology), “tamanho de grão” (GrainSize / Crystallinity), “seleção de grão” (Sorting), “tipo de cimento” (Cement 1st), e numéricas da análise geoquímica  “teor de minerais siliciclásticos" (QFM+), “Teor de calcita” (Calcite+) e "teor de dolomita” (Dolomite+).  Foi inserido o grupo de “PRT KHierarquico” definido na etapa anterior com a proposta de relacionar as classes litológicas com as fácies petrofísicas.
+Para a classificação de fácies sedimentares (litofácies), foram selecionados os atributos categóricas relacionados a litologia e mineralogia, tais como  “litologia” (lithology), “tamanho de grão” (GrainSize / Crystallinity), “seleção de grão” (Sorting), “tipo de cimento” (Cement 1st), e numéricas da análise geoquímica  “teor de minerais siliciclásticos" (QFM+), “Teor de calcita” (Calcite+) e "teor de dolomita” (Dolomite+).  Foi inserido o grupo de “PRT KHierarquico” definido na etapa anterior com a proposta de relacionar as classes litológicas com as fácies petrofísicas.
 
 #### 2.3. Inferências
 
-(inserir texto)
+Foram gerados dois modelos...
 
 **2.3.1. Modelagem dos grupos de Fácies Petrofísica (Petrophysical Rock Type, PRT)**
 
