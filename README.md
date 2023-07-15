@@ -20,7 +20,7 @@ Esse trabalho é uma prova de conceito da aplicação de técnicas de agrupament
 
 No condicionamento da base de dados, os dados passam por etapas de limpeza, remoção de valores nulos, filtragem, conversão de unidades e padronização de valores categóricos. Na análise exploratória são analisados a distribuição e correlação entre os atributos e orienta para a melhor seleção de atributos para cada caso. São testados dois algoritmos de agrupamento: K-médias e hierárquico aglomerativo para geração de fácies petrofísicas. E para a classificação de fácies geológicas, são criados dois modelos de classificação baseados em algoritmos diferentes: Decision Tree e Random Forest.
 
-Os resultados mostram que o modelo de agrupamento hierárquico aglomerativo apresenta uma melhor discriminação dos grupos com base nos atributos analisados. Já o modelo de classificação com Random Forest obteve uma melhor performance em relação ao Decision Tree, porém ainda precisa ser aprimorado para acertar a classe 2.
+Os resultados mostram que o modelo de agrupamento hierárquico aglomerativo apresenta uma melhor discriminação dos grupos com base nos atributos analisados. Já o modelo de classificação com Random Forest obteve uma melhor performance em relação ao Decision Tree, porém ainda precisa ser aprimorado para acertar a classe FAC 20.
 
 Conclui-se que a abordagem de agrupamento hierárquico aglomerativo integrando dados petrográficos e petrofísicos é eficaz na definição de grupos de rochas com características semelhantes. Além disso, a classificação de fácies com o modelo Random Forest mostra-se viável, mas requer melhorias para acertar todas as classes. O método proposto tem potencial para aplicação em dados históricos e não exige revisitar imagens petrográficas, podendo utilizar dados tabulares ou textuais.
 
@@ -237,7 +237,7 @@ F1                 | 0,512         | 0,693
 ![Random Forest: features selection](figures/FEATURES_SELECTION_random_forest.png)
 
 
-As figuras 10 e 11 apresentam as Matriz de Confusão de cada modelo. Nota-se que o modelo Random Forest tem melhores acertos nas classes 3, 4 e 5 e que ambos modelos não acertam a classe 2.
+As figuras 10 e 11 apresentam as Matriz de Confusão de cada modelo. Nota-se que o modelo Random Forest tem melhores acertos nas classes FAC 200, FAC 30 e FAC 40 e que ambos modelos não acertam a classe FAC 20.
 
 `Figura 10: Matriz de confusão do modelo Decision Tree`
 
@@ -254,7 +254,7 @@ A adoção do modelo de agrupamento hierárquico aglomerativa com a integração
 
 Esse método tem potencial em aplicação em dados históricos dados históricos (legados) visto ser necessário apenas dados comumente armazenadas em forma tabular ou textual, não sendo necessário revisitar imagens 2D de lâminas petrográficas. Esses dados também podem ser obtidos de análise de imagem 2D de lâminas petrográficas e volumes (3D) de micro-tomografia, sendo necessário apenas que os dados sejam discretizados em forma de tabelas (arrays).
 
-A classificação de fácies com o método com Random Forest mostrou-se viável e ágil porém tem que ser melhor analisado as performances para acerto da classe 2. A quantidade de amostras para treino e teste são bem pequenas o que causa muito impacto nas métricas. Apesar desse resultado, mostra-se possível aplicar métodos de aprendizado de máquina para a classificação automática de fácies de rocha, reduzindo o viés da subjetividade de interepretação de cada especialista em geologia na classificação da lâmina petrográfica.
+A classificação de fácies com o método com Random Forest mostrou-se viável e ágil porém tem que ser melhor analisado as performances para acerto da classe FAC 20. A quantidade de amostras para treino e teste são bem pequenas o que causa muito impacto nas métricas. Apesar desse resultado, mostra-se possível aplicar métodos de aprendizado de máquina para a classificação automática de fácies de rocha, reduzindo o viés da subjetividade de interepretação de cada especialista em geologia na classificação da lâmina petrográfica.
 
 
 ### _Referências Bibliográficas_
