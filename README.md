@@ -173,25 +173,25 @@ O quadro 04 apresenta as métricas de performance de cada modelo de agrupamento 
 
 `Quadro 04: Métricas dos modelos de agrupamento`
 
-Métrica            | Agrupamento Kmeans | Hierárquico Aglomerativo
+Métrica            | Modelo K-médias    | Modelo Hierárquico Aglomerativo
 --------           | -------------      | ---------------
 Rand Index         | 0,676              | 0,689
 Homogeneity Score  | 0,242              | 0,328
 Completeness Score | 0,221              | 0,205
 V Measure Score    | 0,231              | 0,252
 
-Esses parâmetros não são muitos diferentes e não ajudam muito a avaliação, portanto foi adotado a comparação de boxplots com as propriedaes...
+Como as métricas de perfomance não ajudam na avaliação dos grupos, foi adotado a comparação de boxplots com os atributos de interesse petrofísico
 
-`Figura 05: Boxplot de propriedades petrofísicas por grupos gerados pelo modelo Kmeans`
+`Figura 05: Boxplot de propriedades petrofísicas por grupos gerados pelo modelo K-médias`
 ![BOXPLOT Kmeans](figures/BOXPLOT_grupos_kmeas.png)
 
-`Figura 06: Boxplot de propriedades petrofísicas por grupos gerados pelo modelo Hierarquico Aglomerativo`
+`Figura 06: Boxplot de propriedades petrofísicas por grupos gerados pelo modelo Hierárquico Aglomerativo`
 ![BOXPLOT Kmeans](figures/BOXPLOT_grupos_hierarquico.png)
 
-`Figura 07: Dendograma dos grupos gerados pelo modelo Hierarquico Aglomerativo`
+`Figura 07: Dendograma dos grupos gerados pelo modelo Hierárquico Aglomerativo`
 ![Dendogram do modelo Hierárquico Aglomerativo](figures/Khierarchical_Dendogram.png)
 
-`Figura 08: Gráfico Phi x K por grupos gerados pelo  modelo Hierarquico Aglomerativo`
+`Figura 08: Gráfico Phi x K por grupos gerados pelo  modelo Hierárquico Aglomerativo`
 ![XPLOT Phi x K por grupo hierarquico](figures/XPLOT_grupos_hierarquico.png)
 
 #### 3.2. Performance dos modelos de classificação
