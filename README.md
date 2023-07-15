@@ -38,8 +38,8 @@ Foi utilizado principalmente a biblioteca SciKit-Learn (Pedregosa et al, 2011), 
 
 Para esse trabalho utilizou-se de descrição petrográfica de rochas carbonáticas e análises laboratoriais de geoquímica e petrofísica básica realizadas em 157 amostras de rocha carbonática carstificada e publicadas em Bagni (2021).
 
-Descrição da base de dados utilizados:
-* Sample (sample code): código da amostra
+**Descrição da base de dados utilizados:**
+* _Sample (sample code)_: código da amostra
 * Lithology: categórico, litologia 
 * Grain Size / Crystallinity: categórico, tamanho de grão/cristal
 * Sorting: categórico, seleção do tamanha do grão
