@@ -179,7 +179,7 @@ Homogeneity Score  | 0,242              | 0,328
 Completeness Score | 0,221              | 0,205
 V Measure Score    | 0,231              | 0,252
 
-Como as métricas de perfomance não ajudam na avaliação dos grupos, foi adotado a comparação de boxplots com os atributos de interesse petrofísico
+Como as métricas de perfomance não ajudam na avaliação dos grupos, foi adotado a comparação de boxplots com os atributos de interesse petrofísico para avaliar qual o modelo modelo. As figuras 05 e 06 mostram o gráficos _boxplot_ com atributos de interesse e os grupos gerados por cada modelo.
 
 `Figura 05: Boxplot de propriedades petrofísicas por grupos gerados pelo modelo K-médias`
 ![BOXPLOT Kmeans](figures/BOXPLOT_grupos_kmeas.png)
@@ -187,11 +187,16 @@ Como as métricas de perfomance não ajudam na avaliação dos grupos, foi adota
 `Figura 06: Boxplot de propriedades petrofísicas por grupos gerados pelo modelo Hierárquico Aglomerativo`
 ![BOXPLOT Kmeans](figures/BOXPLOT_grupos_hierarquico.png)
 
-`Figura 07: Dendograma dos grupos gerados pelo modelo Hierárquico Aglomerativo`
+Pela análise dos _boxplots_ identifica-se o modelo Hierárquico Aglomerativo como o melhor pois discrimina com mais resolução os grupos em base dos atributos. Explorando um pouco mais esse modelo em um gráfico de dispersão com os atributos porosidade e permeabilide, e como rótulo os grupos (figura 07), nota-se que é possível identificar que há grupos aparentementes semelhantes nessa dimensão porém o modelo discrimina em mais grupos levando em consideração os outros atributos, sendo útil para uma subamostragem mais detalhada.
+
+`Figura 07: Gráfico Phi x K por grupos gerados pelo  modelo Hierárquico Aglomerativo`
+![XPLOT Phi x K por grupo hierarquico](figures/XPLOT_grupos_hierarquico.png)
+
+A figura 08 apresenta o dendograma do modelo hierárquico aglomerativo e as distâncias de cada grupo.
+
+`Figura 08: Dendograma dos grupos gerados pelo modelo Hierárquico Aglomerativo`
 ![Dendogram do modelo Hierárquico Aglomerativo](figures/Khierarchical_Dendogram.png)
 
-`Figura 08: Gráfico Phi x K por grupos gerados pelo  modelo Hierárquico Aglomerativo`
-![XPLOT Phi x K por grupo hierarquico](figures/XPLOT_grupos_hierarquico.png)
 
 #### 3.2. Performance dos modelos de classificação
 
