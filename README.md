@@ -163,7 +163,7 @@ Hiper-parâmetro   |  Decision Tree | Random Forest
 Critério          | entropy        |  gini
 Max_depth         | 10             |  8
 Min_samples_leaf  | 1              |  1
-N_estimators      |                |  50
+N_estimators      |                |  20
 
 
 ### 3. Resultados
@@ -201,10 +201,10 @@ Como as métricas de perfomance não ajudam na avaliação dos grupos, foi adota
 
 Métrica            | Decision Tree | Random Forest
 -----------        | ------------  | ------------
-Acurácia           | 0,617         | 0,745
-Acurácia Ponderada | 0,429         | 0,628
-Kappa              | 0,417         | 0,593
-F1                 | 0,512         | 0,670
+Acurácia           | 0,617         | 0,766
+Acurácia Ponderada | 0,429         | 0,750
+Kappa              | 0,417         | 0,662
+F1                 | 0,512         | 0,693
 
 `Figura 09: Matriz de confusão do modelo Decision Tree`
 
