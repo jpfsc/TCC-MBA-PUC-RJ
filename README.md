@@ -16,7 +16,18 @@ Trabalho apresentado ao curso [BI MASTER](https://ica.puc-rio.ai/bi-master) como
 
 ### Resumo
 
-(em elaboração)
+O artigo aborda a aplicação de técnicas de agrupamento e classificação para a avaliação de rochas carbonáticas carstificadas semelhantes a reservatórios de petróleo. A modelagem consiste em três etapas: condicionamento da base de dados (ETL), análise exploratória e seleção de atributos, e inferência.
+
+No condicionamento da base de dados, são utilizadas descrições petrográficas e análises laboratoriais de 157 amostras de rochas carbonáticas carstificadas. Os dados passam por etapas de extração, transformação e carga, incluindo limpeza, remoção de valores nulos, filtragem, conversão de unidades e padronização de valores categóricos. São selecionados atributos como tipo de poro, tamanho de poro, porosidade, permeabilidade, litologia, entre outros.
+
+Na análise exploratória e seleção de atributos, é utilizada a correlação de Spearman para avaliar a dependência das variáveis. São testados dois algoritmos de agrupamento: K-médias e hierárquico aglomerativo. Os resultados são avaliados por métricas de performance e por meio de boxplots que mostram a relação entre os atributos e os grupos gerados.
+
+Para a classificação de fácies geológicas, são selecionados atributos relacionados à litologia e mineralogia. São criados dois modelos de classificação baseados em algoritmos diferentes: Decision Tree e Random Forest. A performance dos modelos é avaliada por métricas como acurácia, kappa e F1-score, e são apresentadas matrizes de confusão para análise dos resultados.
+
+Os resultados mostram que o modelo de agrupamento hierárquico aglomerativo apresenta uma melhor discriminação dos grupos com base nos atributos analisados. Já o modelo de classificação com Random Forest obteve uma melhor performance em relação ao Decision Tree, porém ainda precisa ser aprimorado para acertar a classe 2.
+
+O artigo conclui que a abordagem de agrupamento hierárquico aglomerativo integrando dados petrográficos e petrofísicos é eficaz na definição de grupos de rochas com características semelhantes. Além disso, a classificação de fácies com o modelo Random Forest mostra-se viável, mas requer melhorias para acertar todas as classes. O método proposto tem potencial para aplicação em dados históricos e não exige revisitar imagens petrográficas, podendo utilizar dados tabulares ou textuais.
+
 
 ### 1. Introdução
 
