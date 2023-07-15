@@ -1,4 +1,4 @@
-# Machine on Rocks: uso de machine learning para análise geológica e petrofísica de rocha reservatório de petróleo
+# Machine on Rocks: uso de _machine learning_ para análise geológica e petrofísica de rocha reservatório de petróleo
 
 #### Aluno: [João Paulo Teixeira da Fonseca](https://github.com/jpfsc).
 #### Orientadora: [Dra. Manoela Rabello Kohler](https://github.com/manoelakohler).
