@@ -38,41 +38,46 @@ Foi utilizado principalmente a biblioteca SciKit-Learn (Pedregosa et al, 2011), 
 
 Para esse trabalho utilizou-se de descrição petrográfica de rochas carbonáticas e análises laboratoriais de geoquímica e petrofísica básica realizadas em 157 amostras de rocha carbonática carstificada e publicadas em Bagni (2021).
 
-**Descrição da base de dados utilizados:**
-* _Sample (sample code)_: código da amostra
-* Lithology: categórico, litologia 
-* Grain Size / Crystallinity: categórico, tamanho de grão/cristal
-* Sorting: categórico, seleção do tamanha do grão
-* Pore type 1st (Main pore type): categórico, tipo de poro principal
-* Cement 1st (Main cement): categórico, tipo de cimento principal
-* Pore Size: categórico, tamanho do poro
-* Pore Size Mean (mm): numérico, tamanho do poro em milimetros
-* Pore Size Max Vug Size in plug (mm): numérico, tamanho do poro tipo vugular medido em plug em milimetros
-* Depositional System: categórico, classificação do sistema deposicional
-* Main Diagenetic Environment: categórico, classificação do ambiente diagenético
-* Microfacies: categórico, classificação de microfácies
-* Calcite+: numérico, teor de mineral calcite proveniente da análise geoquímica
-* Dolomite+: numérico, teor de mineral dolomita proveniente da análise geoquímica
-* QFM+: numérico, teor de minerais quartzo-feldspato-mica proveniente da análise geoquímica
-* Phi (%): numérico, porosidade em percentagem proveniente da análise petrofísica
-* Kabs (mD):  numérico, permeabilidade em miliDarcy proveniente da análise petrofísica
-* GrainDensity (g/cc):  numérico, média da massa específica do grão em g/cm3 proveniente da análise petrofísica
+A fase de extração, transformação e carga (ETL) consiste na leitura dos arquivos csv (disponibilizado na pasta _dataset_ [link](...) ), limpeza dos dados, remoção de valores nulos, filtragem, conversão de unidades, e padronização de valores categórico.
+
+Segue a lista dos parâmetros selecionados e a sua descrição:
+
+**Parâmetros utilizados:**
+* _Sample_: categórico, código da amostra
+* _Lithology_: categórico, litologia 
+* _Grain Size / Crystallinity_: categórico, tamanho de grão/cristal
+* _Sorting_: categórico, seleção do tamanha do grão
+* _Pore type 1st_: categórico, tipo de poro principal
+* _Cement 1st_: categórico, tipo de cimento principal
+* _Pore Size_: categórico, tamanho do poro
+* _Pore Size Mean (mm)_: numérico, tamanho do poro em milimetros
+* _Pore Size Max Vug Size in plug (mm)_: numérico, tamanho do poro tipo vugular medido em plug em milimetros
+* _Depositional System_: categórico, classificação do sistema deposicional
+* _Main Diagenetic Environment_: categórico, classificação do ambiente diagenético
+* _Microfacies_: categórico, classificação de microfácies
+* _Calcite+_: numérico, teor de mineral calcite proveniente da análise geoquímica
+* _Dolomite+_: numérico, teor de mineral dolomita proveniente da análise geoquímica
+* _QFM+_: numérico, teor de minerais quartzo-feldspato-mica proveniente da análise geoquímica
+* _Phi (fraction)_: numérico, porosidade em decimal (v/v) proveniente da análise petrofísica
+* _Kabs (mD)_:  numérico, permeabilidade absoluta em miliDarcy proveniente da análise petrofísica
+* _GrainDensity (g/cc)_:  numérico, média da massa específica do grão em g/cm3 proveniente da análise petrofísica
 
 **Modelagem Petrofísica (_Petrophysical Rock-Type_, PRT)**
 
-Foi aplicado a modelagem petrofísica conforme realizado em Bagni _et al_ (2022) para obtenção de propriedades relacionados a fácies petrofísicas com o método proposto por Amaefule _et al_ (1993).
+Foi aplicado a modelagem petrofísica conforme realizado em Bagni _et al_ (2022) para obtenção de propriedades relacionados a fácies petrofísicas com o método _Flow Zone Indicator_ (FZI) proposto por Amaefule _et al_ (1993).
 
 #### 2.2. Análise Exploratória e Seleção de atributos
 
-A análise exploratória dos dados mostra uma relação não linear da porosidade com a permeabilidade e FZI por isso adotou-se a correlação de Sprearman para analisar o grau de dependência das variáveis.
-Na figura XX mostra um gráfico de dispersão relacionando porosidade (no X) com a permeabilidade (no Y) e usando como rótulos o tipo de poro e a média do tamanho de poro como tamanho do símbolo do rótulo. Nota-se a relação não-linear forte entre porosidade e permeabilidade
+A análise exploratória dos dados mostra uma relação não linear da porosidade com a permeabilidade e FZI por isso adotou-se a correlação de Spearman (rs) para analisar o grau de dependência das variáveis.
 
-`Figura: Porosidade x Permeabilidade e por tipo e tamanho de poro`
+A figura 01 mostra um gráfico de dispersão relacionando porosidade (no X) com a permeabilidade (no Y) e usando como rótulos o tipo de poro e a média do tamanho de poro como tamanho do símbolo do rótulo. Nota-se a relação não-linear forte entre porosidade e permeabilidade (rs = 0,74).
+
+`Figura 01: Porosidade x Permeabilidade e por tipo e tamanho de poro`
 ![Scatter plot: Phix K](figures/XPLOT_Phi_x_K.png)
 
 **Agrupamento de Fácies Petrofísicas**
 
-Para a modelagem de fáceis petrofísicas (Petrophysical Rock Type, PRT) por agrupamento foram selecionados variáveis categóricas de “tipo de poro” e “tamanho de poro” e variáveis numéricas  “porosidade” (Phi, fraction), “massa específica de grão (GrainDensity, g/cc)” e “permeabilidade” (Kabs, mD). Essas variáveis são utilizadas historicamente na modelagem de fácies petrofísicas por métodos convencionais (Lucia e Amaefule 1993). 
+Para a modelagem de fáceis petrofísicas (_Petrophysical Rock Type_, PRT) por agrupamento foram selecionados variáveis categóricas de “tipo de poro” (_Pore type 1st_) e “tamanho de poro” (Pore Size) e variáveis numéricas  “porosidade” (Phi, fraction), “massa específica de grão (GrainDensity, g/cc)” e “permeabilidade” (Kabs(mD)). Essas variáveis são as mais utilizadas nos métodos convencionais  (Amaefule, 1993 e Lucia, 1995). 
 
 **Classificação de fácies geológicas**
 
@@ -232,6 +237,8 @@ Bruce, P., Bruce, A. 2019. Estatística prática para cientistas de dados: 50 co
 Cuddy, S. 2021. The benefits and dangers of using artificial intelligences in petrophysics. Artificial Intelligence in Geoscienses (2): 1-10.
 
 Evsukoff, A.G. 2020. Inteligência computacional: fundamentos e aplicações [[recurso eletrônico](http://www.e-papers.com.br/produtos.asp?codigo_produto=3168)]. 1ed. Rio de Janeiro: e-papers 
+
+Lucia, F.J. 1995. Rock-fabric/petrophysical classification of carbonate pore space for reservoir characterization. AAPG Bull. (79): 1275-1300.
 
 McDonald, A. 2021. Data quality considerations for petrophysical machine learning models. SPWLA: 62nd annual logging symposium. SPE-195068-MS.
 
