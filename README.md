@@ -200,7 +200,11 @@ A figura 08 apresenta o dendograma do modelo hierárquico aglomerativo e as dist
 
 #### 3.2. Performance dos modelos de classificação
 
-O quadro 05 apresenta as métricas de performance dos modelos de classificação. O modelo Random Forest apresenta as melhores métricas de performance
+O quadro 05 apresenta as métricas de performance dos modelos de classificação. Nota-se a melhor performance do modelo Random Forest. Os atributos com os maiores impactos no modelo Random Forest (figura 09) são: 
+1. Lithology,
+2. Calcite+,
+3. Dolomite+,
+4. GrainSize / Crystallinity.
 
 `Quadro 05: Métricas dos modelos de classificação`
 
@@ -217,7 +221,7 @@ F1                 | 0,512         | 0,693
 ![Random Forest: features selection](figures/FEATURES_SELECTION_random_forest.png)
 
 
-As figuras 10 e 11 apresentam as Matriz de Confusão de cada modelo
+As figuras 10 e 11 apresentam as Matriz de Confusão de cada modelo. Nota-se que o modelo Random Forest tem melhores acertos nas classes 3, 4 e 5 e que ambos modelos não acertam a classe 2.
 
 `Figura 10: Matriz de confusão do modelo Decision Tree`
 
@@ -227,19 +231,15 @@ As figuras 10 e 11 apresentam as Matriz de Confusão de cada modelo
 
 ![Random Forest: matrix de confusão](figures/CONFUSION_MATRIZ_Random_Forest.png)
 
-Os atributos de maior impacto no modelo Decision Treen são: GrainSize / Crystallinity, Lithology, Calcite+, QFM+; enquanto no modelo Random Forest são: Lithology, Calcite+, Dolomite+, GrainSize / Crystallinity. Atributos como Cement 1st e Sorting em ambos os casos fornecem mais erros na classificação. 
-
-
-
 
 ### 4. Conclusões
 
 A adoção do modelo de agrupamento hierárquico aglomerativa com a integração de dados de tipo de poro e tamanho do poro (obtidos na descrição petrográfica) e dos dados de porosidade, permeabilidade e massa específica do grão (oriundo da análise petrofísica) colaborou para uma melhor definição de grupos de rocha com características permo-porosas semelhantes. Vantagens dessa abordagem é poder utilizar dados categóricos e dados laboratoriais para a definição de petrophysical rock type. 
 
-A classificação de fácies com o método com Random Forest mostrou-se viável e ágil
-O modelo com Random Forest demonstrou os melhores resultados e a aplicação é viável para propagação das fácies em amostras não classificadas e sem o viés da subjetividade de diferentes geólogos intérpretes.
-
 Esse método tem potencial em aplicação em dados históricos dados históricos visto ser necessário apenas às descrições petrográficas e mineralógicas (e/ou geoquímicas) comumente armazenadas em forma tabular ou textual, não sendo necessário revisitar imagens 2D de lâminas petrográficas. Esses dados também podem ser obtidos de análise de imagem 2D de lâminas petrográficas e volumes (3D) de micro-tomografia, sendo necessário apenas que os dados sejam discretizados em forma de tabelas (arrays).
+
+
+A classificação de fácies com o método com Random Forest mostrou-se viável e ágil porém tem que ser melhor analisado as performances para acerto da classe 2. Apesar desse resultado...
 
 
 ### _Referências Bibliográficas_
