@@ -28,17 +28,17 @@ Essa prova de conceito tem como objetivo aplicar técnicas de agrupamento e clas
 
 A modelagem consiste de 3 etapas descritas a seguir:
 
-1. Condicionamento da base de dados
+1. Condicionamento da base de dados (ETL)
 2. Análise Exploratória e Seleção de atributos
 3. Inferência
 
 Foi utilizado principalmente a biblioteca SciKit-Learn (Pedregosa et al, 2011), versão 1.2.2.
 
-#### 2.1. Condicionamento da base de dados
+#### 2.1. Condicionamento da base de dados (ETL)
 
 Para esse trabalho utilizou-se de descrição petrográfica de rochas carbonáticas e análises laboratoriais de geoquímica e petrofísica básica realizadas em 157 amostras de rocha carbonática carstificada e publicadas em Bagni (2021).
 
-A fase de extração, transformação e carga (ETL) consiste na leitura dos arquivos csv (disponibilizado na pasta _dataset_ [link](...) ), limpeza dos dados, remoção de valores nulos, filtragem, conversão de unidades, e padronização de valores categórico.
+A fase de extração, transformação e carga (_Extract, Transformation, Load_, ETL) consiste na leitura dos arquivos csv (disponibilizado na pasta _dataset_ [link](...) ), limpeza dos dados, remoção de valores nulos, filtragem, conversão de unidades, e padronização de valores categórico.
 
 Segue a lista dos atributos selecionados e a sua descrição:
 
@@ -62,7 +62,7 @@ Segue a lista dos atributos selecionados e a sua descrição:
 * _Kabs (mD)_:  numérico, permeabilidade absoluta em miliDarcy proveniente da análise petrofísica
 * _GrainDensity (g/cc)_:  numérico, média da massa específica do grão em g/cm3 proveniente da análise petrofísica
 
-**Modelagem Petrofísica (_Petrophysical Rock-Type_, PRT)**
+**Modelagem petrofísica (_Petrophysical Rock-Type_, PRT)**
 
 Foi aplicado a modelagem petrofísica conforme realizado em Bagni _et al_ (2022) para obtenção de propriedades relacionados a fácies petrofísicas com o método _Flow Zone Indicator_ (FZI) proposto por Amaefule _et al_ (1993).
 
@@ -75,7 +75,7 @@ A figura 01 mostra um gráfico de dispersão relacionando os atributos de porosi
 `Figura 01: Porosidade x Permeabilidade e por tipo e tamanho de poro`
 ![Scatter plot: Phix K](figures/XPLOT_Phi_x_K.png)
 
-**Agrupamento de Fácies Petrofísicas**
+**Agrupamento de fácies petrofísicas**
 
 Para a modelagem de fáceis petrofísicas (_Petrophysical Rock Type_, PRT) por agrupamento foram selecionados atributos categóricas de “tipo de poro” (_Pore type 1st_) e “tamanho de poro” (Pore Size) e atributos numéricos  “porosidade” (Phi, fraction), “massa específica de grão (GrainDensity, g/cc)” e “permeabilidade” (Kabs(mD)). Esses atributos são as mais utilizadas nos métodos convencionais  (Amaefule, 1993 e Lucia, 1995). 
 
@@ -85,37 +85,39 @@ Para a classificação de fácies sedimentares (litofácies), foram selecionados
 
 #### 2.3. Inferências
 
-Foram gerados dois modelos...
+A inferência consistiu na geração de um modelo de agrupamento de fácies petrofísicas e outro de classificação de fácies geológicas. Cada modelo tem uma característica específica de atributos selecionados, pré-processamento e algoritmo aplicado.
 
-**2.3.1. Modelagem dos grupos de Fácies Petrofísica (Petrophysical Rock Type, PRT)**
+**2.3.1. Modelagem dos Grupos de Fácies Petrofísica (Petrophysical Rock Type, PRT)**
 
 ***Pré-processamento***
 
-Desse modo adotou-se um fluxo de pré-processamento dos dados separando em dados categóricos, numéricos lineares e numéricos não-linear conforme o fluxo da figura abaixo.
+Desse modo adotou-se um fluxo de pré-processamento dos dados separando em dados categóricos, numéricos lineares e numéricos não-linear conforme o fluxo da figura 02.
 
-`Figura: Fluxo de pré-processamento`
+`Figura 02: Fluxo de pré-processamento`
 
 ![Fluxo de pré-processamento (_Pipeline_)](figures/PreProccesPipeline.png)
 
 ***Modelagem***
 
-Testou-se dois tipos de algoritmo de agrupamento (clustering):
+Testou-se dois tipos de algoritmo de agrupamento (_clustering_):
 
 1. K-médias (Kmeans), e
-2. Hieraquico aglomerativo.
+2. Hierárquico aglomerativo.
 
-A especificação do número ideal de grupos para aplicação no algoritmo de K-médias foi baseado na análise integrada das métricas:
+A especificação do número ideal de grupos para aplicação no algoritmo de **K-médias** foi baseado na análise integrada das métricas:
 1. Soma do quadrado das distâncias do centro dos cluster (WCSS), “análise do cotovelo”;
 2. Indice de Calinski-Harabasx (1974), busco do maior valor;
 3. Indice de Davies-Bouldin (1979), busca do menor valor; e
 4. Coeficiente de Silhueta de Rousseew (1987), busca de valores mais próximos de +1.
    
-A figura XX mostra os gráficos gerados e a identificação de número otimizado de grupos sendo 6 de modo a melhor atender os critérios. 
+A figura 03 mostra os gráficos gerados e a identificação de número otimizado de grupos sendo 6 de modo a melhor atender os critérios. 
 
-`Figura: Busca de melhor número de grupos para aplicação no algoritmo de K-médias`
+`Figura 03: Busca de melhor número de grupos para aplicação no algoritmo de K-médias`
 ![Melhor numero de grupos com Kmeans](figures/Best_Cluster_Number.png)
 
-`Quadro: Hiper-parâmetros dos modelos do modelo de agrupamento Kmeans`
+Com base na análise do melhor número de grupos, constuiu-se o modelo de k-médias com os hiper-parâmetros mostrados no quadro 01.
+
+`Quadro 01: Hiper-parâmetros dos modelos do modelo de agrupamento K-médias`
 
 Hiper-parâmetro | Modelo K-médias
 ---------- | ----------
@@ -124,9 +126,12 @@ N_init  | 50
 Random_state | 1
 Max_iter | 500
 
-Foi gerado outro *modelo com o algoritmo de agrupamento hierárquico aglomerativo* por ser mais flexível que o agrupamento de K-média e acomodar variáveis não numéricas e ser mais sensível na descoberta de grupos anormais (ou outliers) (Bruce & Bruce 2019).
 
-`Quadro: Hiper-parâmetros dos modelos do modelo de agrupamento hierárquico aglomerativo`
+Obtou-se em gerar um **modelo com o algoritmo de agrupamento hierárquico aglomerativo** por ser mais flexível que o agrupamento de K-média e acomodar variáveis não numéricas e ser mais sensível na descoberta de grupos anormais (ou outliers) (Bruce & Bruce 2019).
+
+O único hiper-parâmetros ajustado foi o corte de distância dos grupos (_distance_threshold_) conforme exposto no quadro 02.
+
+`Quadro 02: Hiper-parâmetros dos modelos do modelo de agrupamento hierárquico aglomerativo`
 
 Hiper-parâmetro | Modelo Hierarquico Aglomerativo
 ---------- | ----------
