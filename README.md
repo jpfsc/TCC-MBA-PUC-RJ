@@ -232,7 +232,7 @@ F1                 | 0,512         | 0,693
 ![Random Forest: features selection](figures/FEATURES_SELECTION_random_forest.png)
 
 
-As figuras 10 e 11 apresentam as Matriz de Confusão de cada modelo. Nota-se que o modelo Random Forest tem melhores acertos nas classes 3, 4 e 5 e que ambos modelos não acertam a classe 2.
+As figuras 10 e 11 apresentam as Matriz de Confusão de cada modelo. Nota-se que o modelo Random Forest tem melhores acertos nas classes 3, 4 e 5 e que ambos modelos não acertam a classe 2. A quantidade de amostras para treino e teste são bem pequenas o que causa muito impacto nas métricas visto que 1 resultado falso...
 
 `Figura 10: Matriz de confusão do modelo Decision Tree`
 
@@ -245,12 +245,11 @@ As figuras 10 e 11 apresentam as Matriz de Confusão de cada modelo. Nota-se que
 
 ### 4. Conclusões
 
-A adoção do modelo de agrupamento hierárquico aglomerativa com a integração de dados de tipo de poro e tamanho do poro (obtidos na descrição petrográfica) e dos dados de porosidade, permeabilidade e massa específica do grão (oriundo da análise petrofísica) colaborou para uma melhor definição de grupos de rocha com características permo-porosas semelhantes. Vantagens dessa abordagem é poder utilizar dados categóricos e dados laboratoriais para a definição de petrophysical rock type. 
+A adoção do modelo de agrupamento hierárquico aglomerativa com a integração de dados de tipo de poro e tamanho do poro e dados de porosidade, permeabilidade e massa específica do grão colaborou para uma melhor definição de grupos de rocha com características permo-porosas semelhantes. Essa abordagem provou a possibilidade do uso de dados categóricos comuns na descrição petrográfica de amostras de rochas e dados numéricos oriundos dos ensaios laboratoriais de petrofísica básica para a definição de fácies petrofísicas. 
 
-Esse método tem potencial em aplicação em dados históricos dados históricos visto ser necessário apenas às descrições petrográficas e mineralógicas (e/ou geoquímicas) comumente armazenadas em forma tabular ou textual, não sendo necessário revisitar imagens 2D de lâminas petrográficas. Esses dados também podem ser obtidos de análise de imagem 2D de lâminas petrográficas e volumes (3D) de micro-tomografia, sendo necessário apenas que os dados sejam discretizados em forma de tabelas (arrays).
+Esse método tem potencial em aplicação em dados históricos dados históricos (legados) visto ser necessário apenas dados comumente armazenadas em forma tabular ou textual, não sendo necessário revisitar imagens 2D de lâminas petrográficas. Esses dados também podem ser obtidos de análise de imagem 2D de lâminas petrográficas e volumes (3D) de micro-tomografia, sendo necessário apenas que os dados sejam discretizados em forma de tabelas (arrays).
 
-
-A classificação de fácies com o método com Random Forest mostrou-se viável e ágil porém tem que ser melhor analisado as performances para acerto da classe 2. Apesar desse resultado...
+A classificação de fácies com o método com Random Forest mostrou-se viável e ágil porém tem que ser melhor analisado as performances para acerto da classe 2. Apesar desse resultado, mostra-se possível aplicar métodos de aprendizado de máquina para a classificação automática de fácies de rocha, reduzindo o viés da subjetividade de interepretação de cada especialista em geologia na classificação da lâmina petrográfica.
 
 
 ### _Referências Bibliográficas_
