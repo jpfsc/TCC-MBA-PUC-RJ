@@ -24,6 +24,15 @@ Os resultados mostram que o modelo de agrupamento hierárquico aglomerativo apre
 
 Conclui-se que a abordagem de agrupamento hierárquico aglomerativo integrando dados petrográficos e petrofísicos é eficaz na definição de grupos de rochas com características semelhantes. Além disso, a classificação de fácies com o modelo Random Forest mostra-se viável, mas requer melhorias para acertar todas as classes. O método proposto tem potencial para aplicação em dados históricos e não exige revisitar imagens petrográficas, podendo utilizar dados tabulares ou textuais.
 
+### Abstract
+
+This work is a proof of concept for the application of clustering and classification techniques in the evaluation of carstified carbonate rocks similar to petroleum reservoirs. Petrographic descriptions and laboratory analyses of 157 carstified carbonate rock samples were utilized.
+
+In the data conditioning phase, the data undergo cleaning, removal of missing values, filtering, unit conversion, and standardization of categorical values. In the exploratory analysis, the distribution and correlation between attributes are analyzed, guiding the selection of the most suitable features for each case. Two clustering algorithms, K-means and agglomerative hierarchical clustering, are tested for generating petrophysical rock types. For the classification of geological facies, two classification models based on Decision Tree and Random Forest, are created.
+
+The results indicate that the agglomerative hierarchical clustering model demonstrates better discrimination of groups based on the analyzed features. The Random Forest classification model outperforms the Decision Tree model, although further improvements are required to accurately classify class 2.
+
+In conclusion, the approach of integrating petrographic and petrophysical data through agglomerative hierarchical clustering proves effective in defining groups of rocks with similar characteristics. Moreover, the classification of facies using the Random Forest model shows promise but requires enhancements to accurately classify all classes. The proposed method has the potential for application in legacy data without revisiting petrographic images, as it can utilize tabular or textual data.
 
 ### 1. Introdução
 
